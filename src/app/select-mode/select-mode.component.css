@@ -1,0 +1,27 @@
+.selectModeContainer {
+    padding: 20px 0;
+    color: blue;
+}
+.selectModeContainer h6 {
+    font-size: 14px;
+    color: #999;
+}
+.modeSelection {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ccc;
+}
+.modeSelection .selected {
+    color: blue;
+}
+
+.modeSelection span {
+    cursor: pointer;
+    padding: 0 20px;
+}
+.ind, .team {
+    font-size: 24px;
+}
+.modeSelection i {
+    margin: 0 10px;
+}

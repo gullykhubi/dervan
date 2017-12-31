@@ -1,0 +1,12 @@
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #7f7fde;
+}
+.individual-checboxs {
+    font-size: 14px;
+    color: #666;
+}
+.individual-checboxs input {
+    margin-right: 10px;
+}

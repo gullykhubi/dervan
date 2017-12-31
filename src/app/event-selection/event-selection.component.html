@@ -1,0 +1,76 @@
+<div *ngFor="let e of err" class="alert alert-danger" role="alert">
+  {{e}}
+</div>
+<form>
+<div>
+  <div *ngIf="commonService.selectMode === 'ind'" >
+
+<p>Please Select Decipline and Event you wish to participate in</p>
+<div *ngFor="let decipline of commonService.list[commonService.selectMode]" >
+      <div *ngIf="commonService.selectedEventList[decipline]!=undefined && commonService.selectedEventList[decipline].length>0" >
+	       <div class="title">{{decipline}}</div>
+	       <div  *ngFor="let e of commonService.selectedEventList[decipline]" class="individual-checboxs" (click)="addorremove($event,e,decipline)">
+           <input class="form-check-input" type="checkbox">{{e[getKey(e)[0]]}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="commonService.selectMode === 'team'" class="row" >
+    <div class="col-md-4 ">
+    <p>Select Decipline</p>
+    <div *ngFor="let decipline of commonService.list[commonService.selectMode]" class="individual-checboxs">
+      <span *ngIf="commonService.selectedEventList[decipline] !== undefined && commonService.selectedEventList[decipline].length > 0"><input class="form-check-input" type="radio"  name="disipline" (click)="selectDecipline(decipline)">{{decipline}}</span>
+    </div>
+  </div>
+    <div *ngIf="this.selectedDiscipline!=undefined && commonService.selectedEventList[this.selectedDiscipline].length>0" class="col-md-8">
+      <p>Select Event</p>
+       <div  *ngFor="let e of commonService.selectedEventList[this.selectedDiscipline]" class="individual-checboxs" (click)="addorremove($event,e,this.selectedDiscipline)">
+
+         <input class="form-check-input" type="checkbox">{{e[getKey(e)[0]]}}
+      </div>
+    </div>
+
+</div>
+<div *ngIf="commonService.selectMode === 'team'" class="row" >
+  <div class="col-md-12 text-right">
+    <button class="btn btn-primary" (click) ="addPlayer()">Add Player</button>
+  </div>
+  <div class="col-md-12" *ngIf="addMember === true">
+    <app-team-members (close)="closeDialog($event)"></app-team-members>
+  </div>
+  <table class="table"s>
+    <thead >
+      <tr >
+        <th >Sr. No</th>
+        <th >Firstname</th>
+        <th >Lastname</th>
+        <th >D.O.B</th>
+        <th >Mobile Number</th>
+        <th >Emergence Number</th>
+        <th >Email-id</th>
+        <th >Delete</th>
+      </tr>
+    </thead>
+
+      <tbody >
+        <tr  *ngFor="let member of commonService.teamMemberDetailsList;let i=index">
+          <td>{{i+1}}</td>
+          <td>{{member.firstname}}</td>
+          <td>{{member.lastname}}</td>
+          <td>{{member.day}}/{{member.month}}/{{member.year}}</td>
+          <td>{{member.contactno}}</td>
+          <td>{{member.alternativeno}}</td>
+          <td>{{member.email}}</td>
+          <td (click)="delete(i)"><i class="fa fa-remove fa-fw fa-2x"></i></td>
+        </tr>
+      </tbody>
+  </table>
+
+
+</div>
+  <div class="middle-elements">
+    <button class="btn btn-primary" (click) ="commonService.currentPage = 'personalInfo'">Previous</button>
+    <button class="btn btn-primary" (click)="save()">Submit</button>
+  </div>
+</div>
+</form>

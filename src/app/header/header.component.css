@@ -1,0 +1,27 @@
+.heading {
+    background: #9090f1;
+    background-size: contain;
+}
+.backgroundLayout {
+    padding: 5px;
+}
+h2, h3 {
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+}
+.event-name span {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15px 50px;
+    font-family: OpenSans-Bold;
+    border-bottom: 1px solid #fdf73b;
+    position: relative;
+    font-size: 24px;
+    display: inline-block;
+}
+
+.registration-form {
+    font-size: 14px;
+    font-family: OpenSans-Regular;
+}

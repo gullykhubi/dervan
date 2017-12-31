@@ -1,0 +1,191 @@
+<div *ngFor="let e of err" class="alert alert-danger" role="alert">
+  {{e}}
+</div>
+<form class="example-form">
+  <div class="form-group address" *ngIf="commonService.selectMode === 'team'">
+    <label for="nameOfSchoolOrClub">Name Of the School/Club/Team <span class="astrik">*</span></label>
+    <textarea  [(ngModel)]="commonService.partidetails.nameOfSchoolOrClub" class="form-control " id="nameOfSchoolOrClub" name="nameOfSchoolOrClub" placeholder="Name Of the School/Club/Team" required=""></textarea>
+  </div>
+  <div class="row"  *ngIf="commonService.selectMode === 'team'">
+    <div class="form-group address col-md-6">
+      <label for="addressOfSchoolOrClub">School/Club/Team Address <span class="astrik">*</span></label>
+      <textarea  [(ngModel)]="commonService.partidetails.addressOfSchoolOrClub" class="form-control " id="addressOfSchoolOrClub" name="addressOfSchoolOrClub" placeholder="Address" required=""></textarea>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="form-group   col-md-6  col-sm-12">
+          <label for="schoolcity">City/Taluka <span class="astrik">*</span></label>
+          <input  [(ngModel)]="commonService.partidetails.schoolcity" class="form-control " id="schoolcity" name="schoolcity" placeholder="City/Taluka" required="" type="text">
+        </div>
+        <div class="form-group  col-md-6  col-sm-12">
+          <label for="schoolpincode">Pin Code <span class="astrik">*</span></label>
+          <input  [(ngModel)]="commonService.partidetails.schoolpincode" class="form-control " id="schoolpincode" maxlength="6" name="schoolpincode" placeholder="Pin Code" required="" type="text">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group  col-md-12 col-sm-12">
+          <label for="schoolstate">State <span class="astrik">*</span></label>
+          <select  [(ngModel)]="commonService.partidetails.schoolstate" class="form-control state " id="schoolstate" name="schoolstate" placeholder="State" required="">
+            <option *ngFor="let state of states" [value]="state">
+              {{state}}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-4  col-sm-12">
+      <label for="firstname">First Name <span class="astrik">*</span></label>
+      <input class="form-control " id="firstname" name="firstname" [(ngModel)]="commonService.partidetails.firstname" placeholder="Name" required="" type="text">
+    </div>
+    <div class="form-group col-md-4  col-sm-12">
+      <label for="middlename">Father Name</label>
+      <input class="form-control  ng-pristine ng-valid" id="middlename"  [(ngModel)]="commonService.partidetails.middlename" name="middlename" placeholder="Father Name" type="text">
+    </div>
+    <div class="form-group col-md-4  col-sm-12">
+      <label for="lastname">Surname <span class="astrik">*</span></label>
+      <input class="form-control " id="lastname" name="lastname"  [(ngModel)]="commonService.partidetails.lastname" placeholder="Surname" required="" type="text">
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group address col-md-6">
+      <label for="addr1">Address <span class="astrik">*</span></label>
+      <textarea class="form-control " id="addr1" name="addr1" placeholder="Address" required=""  [(ngModel)]="commonService.partidetails.addr1"></textarea>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="form-group   col-md-6  col-sm-12">
+          <label for="city">City/Taluka <span class="astrik">*</span></label>
+          <input class="form-control " id="city" name="city" placeholder="City/Taluka" required=""  [(ngModel)]="commonService.partidetails.city" type="text">
+        </div>
+        <div class="form-group  col-md-6  col-sm-12">
+          <label for="pincode">Pin Code <span class="astrik">*</span></label>
+          <input class="form-control " id="pincode" maxlength="6" name="pincode" placeholder="Pin Code" required="" type="text"  [(ngModel)]="commonService.partidetails.pincode">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group  col-md-12 col-sm-12">
+          <label for="state">State <span class="astrik">*</span></label>
+          <select class="form-control state " id="state" name="state" placeholder="State" required=""  [(ngModel)]="commonService.partidetails.state">
+            <option *ngFor="let state of states" [value]="state">
+              {{state}}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group address" *ngIf="commonService.selectMode === 'ind'">
+    <label for="nameOfSchoolOrClub">Name Of the School/Club <span class="astrik">*</span></label>
+    <textarea  [(ngModel)]="commonService.partidetails.nameOfSchoolOrClub" class="form-control " id="nameOfSchoolOrClub" name="nameOfSchoolOrClub" placeholder="Name Of the School/Club" required=""></textarea>
+  </div>
+  <div class="row"  *ngIf="commonService.selectMode === 'ind'">
+    <div class="form-group address col-md-6">
+      <label for="addressOfSchoolOrClub">School/Club Address <span class="astrik">*</span></label>
+      <textarea  [(ngModel)]="commonService.partidetails.addressOfSchoolOrClub" class="form-control " id="addressOfSchoolOrClub" name="addressOfSchoolOrClub" placeholder="Address" required=""></textarea>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="form-group   col-md-6  col-sm-12">
+          <label for="schoolcity">City/Taluka <span class="astrik">*</span></label>
+          <input  [(ngModel)]="commonService.partidetails.schoolcity" class="form-control " id="schoolcity" name="schoolcity" placeholder="City/Taluka" required="" type="text">
+        </div>
+        <div class="form-group  col-md-6  col-sm-12">
+          <label for="schoolpincode">Pin Code <span class="astrik">*</span></label>
+          <input  [(ngModel)]="commonService.partidetails.schoolpincode" class="form-control " id="schoolpincode" maxlength="6" name="schoolpincode" placeholder="Pin Code" required="" type="text">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group  col-md-12 col-sm-12">
+          <label for="schoolstate">State <span class="astrik">*</span></label>
+          <select  [(ngModel)]="commonService.partidetails.schoolstate" class="form-control state " id="schoolstate" name="schoolstate" placeholder="State" required="">
+            <option *ngFor="let state of states" [value]="state">
+              {{state}}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-check form-check-inline">
+    <label class="label">Gender: </label>
+    <label class="form-check-label">
+      <input class="form-check-input"  [(ngModel)]="commonService.partidetails.gender" id="inlineRadio3" name="symbol" type="radio" value="B"> Male
+    </label>
+    <label class="form-check-label">
+      <input class="form-check-input" id="inlineRadio3" name="symbol"  [(ngModel)]="commonService.partidetails.gender" type="radio" value="G"> Female
+    </label>
+   </div>
+   <div class="row">
+     <div class="form-group   col-md-8  col-sm-12">
+      <div class="row">
+        <label class="label  col-md-2  col-sm-12">D.O.B <span _ngcontent-c0="" class="astrik">*</span>:</label>
+        <select class="form-control col-md-2 col-sm-12 mr-2" placeholder="Day" [(ngModel)]="day" name="day" required  (ngModelChange)="calAge($event)">
+          <option *ngFor="let i of daylist" [value]="i">
+            {{i}}
+          </option>
+        </select>
+        <select class="form-control col-md-2 col-sm-12 mr-2" placeholder="Month" [(ngModel)]="month" name="month" required  (ngModelChange)="calAge($event)">
+          <option *ngFor="let i of monthlist;let e = index" [value]="e+1">
+				    {{i}}
+			   </option>
+        </select>
+        <select class="form-control col-md-2 col-sm-12 mr-2" [(ngModel)]="year" name="year" required (ngModelChange)="calAge($event)" placeholder="Year" required="">
+          <option *ngFor="let i of years" [value]="i">
+            {{i}}
+			    </option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group col-md-4 col-sm-12 number">
+      <label class="label margins"> Age: {{yrs}} years {{months}} months </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-3  col-sm-12">
+      <label for="contactno">Mobile Number <span class="astrik">*</span></label>
+      <input class="form-control"  [(ngModel)]="commonService.partidetails.contactno" id="contactno" name="contactno" placeholder="Mobile Number" required="" type="text">
+    </div>
+    <div class="form-group col-md-3  col-sm-12">
+      <label for="alternativeno">Emergence Number <span class="astrik">*</span></label>
+      <input class="form-control"  [(ngModel)]="commonService.partidetails.alternativeno" id="alternativeno" name="alternativeno" placeholder="Emergence Number" required="" type="text">
+    </div>
+    <div class="form-group col-md-3  col-sm-12">
+      <label for="bloodgroup">Blood Group</label>
+      <select class="form-control" [(ngModel)]="commonService.partidetails.bloodgroup" id="bloodgroup" name="bloodgroup">
+        <option value="O-">O- </option>
+        <option value="O+">O+ </option>
+        <option value="A-">A- </option>
+        <option value="A+">A+ </option>
+        <option value="B-">B- </option>
+        <option value="B+">B+ </option>
+        <option value="AB-">AB-</option>
+        <option value="AB+">AB+</option>
+      </select>
+    </div>
+    <div class="form-group col-md-3  col-sm-12">
+      <label for="email">Email-Id <span class="astrik">*</span></label>
+      <input class="form-control"  [(ngModel)]="commonService.partidetails.email" id="email" name="email" placeholder="Email-Id" required="" type="text">
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-3  col-sm-12">
+      <label for="identitytype">Identity Type</label>
+      <select class="form-control"  [(ngModel)]="commonService.partidetails.identitytype" id="identitytype" name="identitytype">
+        <option value="aadhar">Aadhar Card</option>
+        <option value="pancard">Pan card</option>
+        <option value="rationcard">Ration card</option>
+      </select>
+    </div>
+    <div class="form-group col-md-3  col-sm-12">
+      <label for="identitynumber">Identity Number</label>
+      <input class="form-control"  [(ngModel)]="commonService.partidetails.identitynumber" id="identitynumber" name="identitynumber" placeholder="Identity Number" required="" type="text">
+    </div>
+  </div>
+    <div class="middle-elements">
+      <button class="btn btn-primary" (click)="moveNext()">Next</button>
+      <p>Please click on Next to go to Game selection</p>
+    </div>
+
+</form>

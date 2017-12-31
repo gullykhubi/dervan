@@ -1,0 +1,68 @@
+<div *ngFor="let e of err" class="alert alert-danger" role="alert">
+  {{e}}
+</div>
+<form>
+  <div class="row">
+    <div class="form-group col-md-6  col-sm-12">
+      <label for="firstname">First Name <span class="astrik">*</span></label>
+      <input class="form-control " id="firstname" name="firstname" [(ngModel)]="partidetails.firstname" placeholder="Name" required="" type="text">
+    </div>
+    <div class="form-group col-md-6  col-sm-12">
+      <label for="lastname">Surname <span class="astrik">*</span></label>
+      <input class="form-control " id="lastname" name="lastname"  [(ngModel)]="partidetails.lastname" placeholder="Surname" required="" type="text">
+    </div>
+  </div>
+  <div class="row">
+    <label class="label  col-md-2  col-sm-12">D.O.B <span class="astrik">*</span>:</label>
+    <select class="form-control col-md-1 col-sm-12 mr-2" placeholder="Day" [(ngModel)]="partidetails.day" name="day" required  (ngModelChange)="calAge($event)">
+      <option *ngFor="let i of daylist" [value]="i">
+        {{i}}
+      </option>
+    </select>
+    <select class="form-control col-md-2 col-sm-12 mr-2" placeholder="Month" [(ngModel)]="partidetails.month" name="month" required (ngModelChange)="calAge($event)">
+      <option *ngFor="let i of monthlist;let e = index" [value]="e+1">
+        {{i}}
+     </option>
+    </select>
+    <select class="form-control col-md-1 col-sm-12 mr-2" [(ngModel)]="partidetails.year" name="year" required placeholder="Year" required="" (ngModelChange)="calAge($event)">
+      <option *ngFor="let i of years" [value]="i">
+        {{i}}
+      </option>
+    </select>
+    <div class="form-group col-md-4 col-sm-12 number">
+      <label class="label margins"> Age: {{yrs}} years {{months}} months </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-3  col-sm-12">
+      <label for="contactno">Mobile Number <span class="astrik">*</span></label>
+      <input class="form-control"  [(ngModel)]="partidetails.contactno" id="contactno" name="contactno" placeholder="Mobile Number" required="" type="text">
+    </div>
+    <div class="form-group col-md-3  col-sm-12">
+      <label for="alternativeno">Emergence Number <span class="astrik">*</span></label>
+      <input class="form-control"  [(ngModel)]="partidetails.alternativeno" id="alternativeno" name="alternativeno" placeholder="Emergence Number" required="" type="text">
+    </div>
+    <div class="form-group col-md-3  col-sm-12">
+      <label for="bloodgroup">Blood Group</label>
+      <select class="form-control" [(ngModel)]="partidetails.bloodgroup" id="bloodgroup" name="bloodgroup">
+        <option value="O-">O- </option>
+        <option value="O+">O+ </option>
+        <option value="A-">A- </option>
+        <option value="A+">A+ </option>
+        <option value="B-">B- </option>
+        <option value="B+">B+ </option>
+        <option value="AB-">AB-</option>
+        <option value="AB+">AB+</option>
+      </select>
+    </div>
+    <div class="form-group col-md-3  col-sm-12">
+      <label for="email">Email-Id <span class="astrik">*</span></label>
+      <input class="form-control"  [(ngModel)]="partidetails.email" id="email" name="email" placeholder="Email-Id" required="" type="text">
+    </div>
+  </div>
+
+    <div class="middle-elements">
+      <button class="btn btn-primary" (click)="cancel()">Cancel</button>
+      <button class="btn btn-primary" (click)="save()">Save</button>
+    </div>
+</form>
