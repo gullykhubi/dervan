@@ -1,0 +1,55 @@
+]"ATHLETICS"
+'G':[
+{
+        "9064": "UNDER 16 4*100 RELAY",
+        "minage": 16
+      },
+]"KABADDI"
+'G':[
+{
+        "9103": "UNDER 14 TEAM",
+        "minage": 14
+      },
+{
+        "9105": "UNDER 18 TEAM",
+        "minage": 18
+      },
+]"KHO KHO"
+'G':[
+{
+        "9107": "UNDER 14 TEAM",
+        "minage": 14
+      },
+{
+        "9109": "UNDER 18 TEAM",
+        "minage": 18
+      },
+]"LANGADI"
+'G':[
+{
+        "9111": "UNDER 14 TEAM",
+        "minage": 14
+      },
+{
+        "9113": "UNDER 17 TEAM",
+        "minage": 17
+      },
+]"SWIMMING"
+'G':[
+{
+        "9175": "U10 & U12 MIX RELAY 4X50 FREESTYLE",
+        "minage": 12
+      },
+{
+        "9177": "U14 & U17 MIX RELAY 4X50 FREESTYLE",
+        "minage": 17
+      },
+{
+        "9179": "U10 & U12 MIX RELAY 4X50 IND MEDLAY",
+        "minage": 12
+      },
+{
+        "9181": "U14 & U17 MIX RELAY 4X50 IND MEDLAY",
+        "minage": 17
+      },
+]
