@@ -1,6 +1,4 @@
-<div *ngFor="let e of err" class="alert alert-danger" role="alert">
-  {{e}}
-</div>
+
 <form>
 <div>
   <div *ngIf="commonService.selectMode === 'ind'" >
@@ -74,3 +72,6 @@
   </div>
 </div>
 </form>
+<div *ngFor="let e of err" class="alert alert-danger" role="alert">
+  {{e}}
+</div>

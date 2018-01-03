@@ -77,7 +77,7 @@ pdf: any;
       let temp=this.commonService.eventSelected[i];
       games.push([{"text":(i+1)},{"text":temp.name},{"text":temp.text},{"text":"Rs "+a}])
     }
-    games.push([{"text":""},{"text":""},{"text":"Total : "},{"text" : "Rs "+ (this.commonService.eventSelected.length*a) }])
+    games.push([{"text":""},{"text":""},{"text":"Total amount Payable : "},{"text" : "Rs "+ (this.commonService.eventSelected.length*a) }])
 
     return {
   "style": "tableExample",

@@ -1,5 +1,5 @@
 .heading {
-    background: #9090f1;
+    background: #e01f23;
     background-size: contain;
 }
 .backgroundLayout {
@@ -20,8 +20,18 @@ h2, h3 {
     font-size: 24px;
     display: inline-block;
 }
+.event-name span sup{
+	font-size: 8px;
+}
 
 .registration-form {
     font-size: 14px;
     font-family: OpenSans-Regular;
+}
+
+img {
+    vertical-align: middle;
+    position: absolute;
+    width: 120px;
+    height: 110px;
 }

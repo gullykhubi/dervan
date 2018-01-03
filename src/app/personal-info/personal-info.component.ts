@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { india_states } from '../states';
+import { schoolnames } from '../schoolname';
+
 import { CommonService } from "../common.service";
 @Component({
   selector: 'app-personal-info',
@@ -8,6 +10,8 @@ import { CommonService } from "../common.service";
 })
 export class PersonalInfoComponent implements OnInit {
   states = india_states;
+  schoolNames=schoolnames;
+  nameofSchool="";
   years: any =[];
   yrs: any = 0;
   months: any = 0;
@@ -18,10 +22,45 @@ export class PersonalInfoComponent implements OnInit {
   dayofbirth=0;
   err:any =[];
   daylist=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+  citiesList=["AHMEDNAGAR ",
+"AMRAVATI ",
+"AURANGABAD ",
+"BARAMATI",
+"BHUSAWAL ",
+"BEED ",
+"CHANDRAPUR",
+"DHULE ",
+"ICHALKARANJI",
+"IGATPURI",
+"INDAPUR",
+"JALGAON",
+"JALNA",
+"KARAD",
+"KOLHAPUR ",
+"LANJA",
+"LATUR",
+"MAHAD ",
+"MALEGAON",
+"MALKAPUR",
+"MALWAN ",
+"MANMAD",
+"NAGOTHANA",
+"NAGPUR ",
+"NASHIK",
+"NAVI MUMBAI",
+"OSMANABAD ",
+"PANDHARPUR ",
+"PARBHANI",
+"PUNE",
+"SANGLI",
+"SHIRDI ",
+"SHRIRAMPUR",
+"SOLAPUR"];
+
   monthlist= [ "January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December" ];
   constructor(public commonService: CommonService) { }
   ngOnInit() {
-    for(let i=1970;i<=new Date().getFullYear()-10;i++) {
+    for(let i=1999;i<=new Date().getFullYear()-10;i++) {
 			this.years.push(i);
 		}
     this.commonService.partidetails.gender='B';
@@ -32,21 +71,6 @@ export class PersonalInfoComponent implements OnInit {
 		return false;
 	}
     calAge(n) {
-                /*let e = 31;
-                if (void 0 != this.day && void 0 != this.month && void 0 != this.year && ("February" == this.month ? (this.isLeapyear() && this.day < 30 || this.day < 29) && (e = 28,
-                this.isLeapyear() && (e = 28),
-                this.valideDate = !0) : "April" == this.month || "June" == this.month || "September" == this.month || "November" == this.month ? this.day < 31 && (this.valideDate = !0,
-                e = 31) : this.valideDate = !0,
-                this.valideDate)) {
-                  debugger;
-                    this.commonService.partidetails.dob = new Date(this.month + "/" + this.day + "/" + this.year);
-                    let t = new Date("01/01/2018").getTime() - new Date(this.day + "/" + this.month + "/" + this.year).getTime()
-                      , r = new Date(t);
-                    this.dayofbirth = e - r.getDate(),
-                    this.months = 12 - (r.getMonth() + 1),
-                    this.yrs = Math.abs(r.getUTCFullYear() - 1970),
-                    this.valideDate = !1
-                }*/
           let d = 31;
         if (this.day != undefined && this.month != undefined && this.year != undefined) {
             if (this.month == 'February') {
@@ -109,23 +133,38 @@ export class PersonalInfoComponent implements OnInit {
       isEmpty = function(n, e) {
         "" == n.trim() && this.err.push(e + " is Required")
       }
+	  isNumber(value,msg){
+		if("" !== value.trim() &&isNaN(value)){
+			this.err.push(msg + " must be numeric");
+		}
+		}
       moveNext(){
         this.err = [];
+		if(this.nameofSchool!=='other'){
+			this.commonService.partidetails.nameOfSchoolOrClub=this.nameofSchool;	
+		}
+		
         this.isEmpty(this.commonService.partidetails.firstname, "Name");
         this.isEmpty(this.commonService.partidetails.lastname, "Surname");
         this.isEmpty(this.commonService.partidetails.addr1, "Address");
         this.isEmpty(this.commonService.partidetails.nameOfSchoolOrClub, "Name Of the School/Club");
         this.isEmpty(this.commonService.partidetails.addressOfSchoolOrClub, "School/Club Address");
         this.isEmpty(this.commonService.partidetails.contactno, "Mobile Number");
-        this.isEmpty(this.commonService.partidetails.alternativeno, "Emergence Number");
+		this.isNumber(this.commonService.partidetails.contactno, "Mobile Number");
+        this.isEmpty(this.commonService.partidetails.alternativeno, "Emergency Number");
+		this.isNumber(this.commonService.partidetails.alternativeno, "Emergency Number");
         this.isEmpty(this.commonService.partidetails.email, "Email-Id");
         this.isEmpty(this.commonService.partidetails.state, "State");
         this.isEmpty(this.commonService.partidetails.city, "City");
         this.isEmpty(this.commonService.partidetails.pincode, "Pin Code");
+		this.isNumber(this.commonService.partidetails.pincode, "Pin Code");
+			
         this.isEmpty(this.commonService.partidetails.schoolstate, "State of school");
         this.isEmpty(this.commonService.partidetails.schoolcity, "City of school");
         this.isEmpty(this.commonService.partidetails.schoolpincode, "Code of school");
-        if(this.err.length === 0){
+        this.isNumber(this.commonService.partidetails.schoolpincode, "Code of school");
+		
+		if(this.err.length === 0){
             this.commonService.partidetails.age=this.yrs + "," + this.months;
             let temp={};
 			      for(let i=0;i<this.commonService.list[this.commonService.selectMode].length;i++){

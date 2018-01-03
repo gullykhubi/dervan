@@ -1,6 +1,3 @@
-<div *ngFor="let e of err" class="alert alert-danger" role="alert">
-  {{e}}
-</div>
 <form>
   <div class="row">
     <div class="form-group col-md-6  col-sm-12">
@@ -39,8 +36,8 @@
       <input class="form-control"  [(ngModel)]="partidetails.contactno" id="contactno" name="contactno" placeholder="Mobile Number" required="" type="text">
     </div>
     <div class="form-group col-md-3  col-sm-12">
-      <label for="alternativeno">Emergence Number <span class="astrik">*</span></label>
-      <input class="form-control"  [(ngModel)]="partidetails.alternativeno" id="alternativeno" name="alternativeno" placeholder="Emergence Number" required="" type="text">
+      <label for="alternativeno">Emergency Number <span class="astrik">*</span></label>
+      <input class="form-control"  [(ngModel)]="partidetails.alternativeno" id="alternativeno" name="alternativeno" placeholder="Emergency Number" required="" type="text">
     </div>
     <div class="form-group col-md-3  col-sm-12">
       <label for="bloodgroup">Blood Group</label>
@@ -53,6 +50,7 @@
         <option value="B+">B+ </option>
         <option value="AB-">AB-</option>
         <option value="AB+">AB+</option>
+		<option value="Not Known">Not Known</option>
       </select>
     </div>
     <div class="form-group col-md-3  col-sm-12">
@@ -66,3 +64,6 @@
       <button class="btn btn-primary" (click)="save()">Save</button>
     </div>
 </form>
+<div *ngFor="let e of err" class="alert alert-danger" role="alert">
+  {{e}}
+</div>

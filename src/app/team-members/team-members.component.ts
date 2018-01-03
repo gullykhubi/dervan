@@ -23,12 +23,18 @@ export class TeamMembersComponent implements OnInit {
   isEmpty = function(n, e) {
     "" == n.trim() && this.err.push(e + " is Required")
   }
+  
+	  isNumber(value,msg){
+		if("" !== value.trim() &&isNaN(value)){
+			this.err.push(msg + " must be numeric");
+		}
+		}
   constructor(public commonService: CommonService) {
     this.partidetails=JSON.parse(JSON.stringify(this.commonService.teamMemberDetail));
   }
 
   ngOnInit() {
-    for(let i=1970; i<=new Date().getFullYear()-10;i++) {
+    for(let i=1999; i<=new Date().getFullYear()-10;i++) {
 			this.years.push(i);
 		}
   }
@@ -90,7 +96,9 @@ export class TeamMembersComponent implements OnInit {
     this.isEmpty(this.partidetails.firstname, "Name");
     this.isEmpty(this.partidetails.lastname, "Surname");
     this.isEmpty(this.partidetails.contactno, "Mobile Number");
-    this.isEmpty(this.partidetails.alternativeno, "Emergence Number");
+	this.isNumber(this.partidetails.contactno, "Mobile Number");
+    this.isEmpty(this.partidetails.alternativeno, "Emergency Number");
+    this.isNumber(this.partidetails.alternativeno, "Emergency Number");
     this.isEmpty(this.partidetails.email, "Email-Id");
     if(this.partidetails.day === '' || this.partidetails.month === '' || this.partidetails.year === ''){
       this.err.push("Enter the Date of Birth.");
