@@ -26,7 +26,7 @@ export class TeamMembersComponent implements OnInit {
   
 	  isNumber(value,msg){
 		if("" !== value.trim() &&isNaN(value)){
-			this.err.push(msg + " must be numeric");
+			this.err.push("Please enter valid value in "+msg);
 		}
 		}
   constructor(public commonService: CommonService) {

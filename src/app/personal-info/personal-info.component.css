@@ -11,3 +11,9 @@ label {
 .address.col-md-6 textarea {
     height: 120px;
 }
+h3{
+	margin-top: 20px;
+    font-size: 26px;
+    text-align: center;
+    color: blue;
+}

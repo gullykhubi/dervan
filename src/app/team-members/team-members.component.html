@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="row">
-    <label class="label  col-md-2  col-sm-12">D.O.B <span class="astrik">*</span>:</label>
+    <label class="label  col-md-2  col-sm-12">Date of Birth<span class="astrik">*</span></label>
     <select class="form-control col-md-1 col-sm-12 mr-2" placeholder="Day" [(ngModel)]="partidetails.day" name="day" required  (ngModelChange)="calAge($event)">
       <option *ngFor="let i of daylist" [value]="i">
         {{i}}
@@ -58,12 +58,11 @@
       <input class="form-control"  [(ngModel)]="partidetails.email" id="email" name="email" placeholder="Email-Id" required="" type="text">
     </div>
   </div>
-
+<div *ngFor="let e of err" class="alert alert-danger" role="alert">
+  {{e}}
+</div>
     <div class="middle-elements">
       <button class="btn btn-primary" (click)="cancel()">Cancel</button>
       <button class="btn btn-primary" (click)="save()">Save</button>
     </div>
 </form>
-<div *ngFor="let e of err" class="alert alert-danger" role="alert">
-  {{e}}
-</div>

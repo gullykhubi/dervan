@@ -16,14 +16,15 @@
 	<input *ngIf="nameofSchool=== 'other'" [(ngModel)]="commonService.partidetails.nameOfSchoolOrClub" class="form-control " id="txtnameOfSchoolOrClub" name="txtnameOfSchoolOrClub" type="text">
 	
 	</div></div>
+	<h3>Please enter Captain's Information</h3>
   </div>
-  <div class="row"  *ngIf="commonService.selectMode === 'team'">
-    <!--div class="form-group address col-md-6">
+  <!--div class="row"  *ngIf="commonService.selectMode === 'team'">
+    <div class="form-group address col-md-6">
       <label for="addressOfSchoolOrClub">School/Club/Team Address <span class="astrik">*</span></label>
       <textarea  [(ngModel)]="commonService.partidetails.addressOfSchoolOrClub" class="form-control " id="addressOfSchoolOrClub" name="addressOfSchoolOrClub" placeholder="Address" required=""></textarea>
     </div>
-    <div class="col-md-12"-->
-      <!--div class="row"-->
+    <div class="col-md-12">
+      <div class="row">
         <div class="form-group   col-md-3  col-sm-12">
           <label for="schoolcity">City/Taluka <span class="astrik">*</span></label>
 		  <select  [(ngModel)]="commonService.partidetails.schoolcity" class="form-control" id="schoolcity" name="schoolcity"  required="">
@@ -36,8 +37,8 @@
           <label for="schoolpincode">Pin Code <span class="astrik">*</span></label>
           <input  [(ngModel)]="commonService.partidetails.schoolpincode" class="form-control " id="schoolpincode" maxlength="6" name="schoolpincode" placeholder="Pin Code" required="" type="text">
         </div>
-      <!--/div-->
-      <!--div class="row"-->
+      </div>
+      <div class="row">
         <div class="form-group  col-md-6 col-sm-12">
           <label for="schoolstate">State <span class="astrik">*</span></label>
           <select  [(ngModel)]="commonService.partidetails.schoolstate" class="form-control state " id="schoolstate" name="schoolstate" placeholder="State" required="">
@@ -46,9 +47,9 @@
             </option>
           </select>
         </div>
-      <!--/div>
-    </div-->
-  </div>
+      </div>
+    </div>
+  </div-->
   <div class="row">
     <div class="form-group col-md-4  col-sm-12">
       <label for="firstname">First Name <span class="astrik">*</span></label>
@@ -113,13 +114,13 @@
 	
 	</div></div>
   </div>
-  <div class="row"  *ngIf="commonService.selectMode === 'ind'">
-   <!--div class="form-group address col-md-6">
+  <!--div class="row"  *ngIf="commonService.selectMode === 'ind'">
+   <div class="form-group address col-md-6">
       <label for="addressOfSchoolOrClub">School/Club/Team Address <span class="astrik">*</span></label>
       <textarea  [(ngModel)]="commonService.partidetails.addressOfSchoolOrClub" class="form-control " id="addressOfSchoolOrClub" name="addressOfSchoolOrClub" placeholder="Address" required=""></textarea>
-    </div-->
-    <!--div class="col-md-12">
-      <div class="row"-->
+    </div>
+    <div class="col-md-12">
+      <div class="row">
         <div class="form-group   col-md-3  col-sm-12">
           <label for="schoolcity">City/Taluka <span class="astrik">*</span></label>
 		  <select  [(ngModel)]="commonService.partidetails.schoolcity" class="form-control" id="schoolcity" name="schoolcity"  required="">
@@ -132,8 +133,8 @@
           <label for="schoolpincode">Pin Code <span class="astrik">*</span></label>
           <input  [(ngModel)]="commonService.partidetails.schoolpincode" class="form-control " id="schoolpincode" maxlength="6" name="schoolpincode" placeholder="Pin Code" required="" type="text">
         </div>
-      <!--/div-->
-      <!--div class="row"-->
+      </div>
+      <div class="row">
         <div class="form-group  col-md-6 col-sm-12">
           <label for="schoolstate">State <span class="astrik">*</span></label>
           <select  [(ngModel)]="commonService.partidetails.schoolstate" class="form-control state " id="schoolstate" name="schoolstate" placeholder="State" required="">
@@ -142,9 +143,9 @@
             </option>
           </select>
         </div>
-      <!--/div>
-    </div-->
-	</div>
+      </div>
+    </div>
+	</div-->
   <div class="form-check form-check-inline">
     <label class="label">Gender: </label>
     <label class="form-check-label">
@@ -157,7 +158,7 @@
    <div class="row">
      <div class="form-group   col-md-8  col-sm-12">
       <div class="row">
-        <label class="label  col-md-2  col-sm-12">D.O.B <span _ngcontent-c0="" class="astrik">*</span>:</label>
+        <label class="label  col-md-2  col-sm-12">Date of Birth<span _ngcontent-c0="" class="astrik">*</span></label>
         <select class="form-control col-md-2 col-sm-12 mr-2" placeholder="Day" [(ngModel)]="day" name="day" required  (ngModelChange)="calAge($event)">
           <option *ngFor="let i of daylist" [value]="i">
             {{i}}
@@ -221,12 +222,12 @@
       <input class="form-control"  [(ngModel)]="commonService.partidetails.identitynumber" id="identitynumber" name="identitynumber" placeholder="Identity Number" required="" type="text">
     </div>
   </div>
+  <div *ngFor="let e of err" class="alert alert-danger" role="alert">
+  {{e}}
+</div>
     <div class="middle-elements">
       <button class="btn btn-primary" (click)="moveNext()">Next</button>
       <p>Please click on Next to go to Game selection</p>
     </div>
 
 </form>
-<div *ngFor="let e of err" class="alert alert-danger" role="alert">
-  {{e}}
-</div>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { india_states } from '../states';
 import { schoolnames } from '../schoolname';
 
+import { cityNamesList } from '../cityNames';
+
 import { CommonService } from "../common.service";
 @Component({
   selector: 'app-personal-info',
@@ -22,40 +24,7 @@ export class PersonalInfoComponent implements OnInit {
   dayofbirth=0;
   err:any =[];
   daylist=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
-  citiesList=["AHMEDNAGAR ",
-"AMRAVATI ",
-"AURANGABAD ",
-"BARAMATI",
-"BHUSAWAL ",
-"BEED ",
-"CHANDRAPUR",
-"DHULE ",
-"ICHALKARANJI",
-"IGATPURI",
-"INDAPUR",
-"JALGAON",
-"JALNA",
-"KARAD",
-"KOLHAPUR ",
-"LANJA",
-"LATUR",
-"MAHAD ",
-"MALEGAON",
-"MALKAPUR",
-"MALWAN ",
-"MANMAD",
-"NAGOTHANA",
-"NAGPUR ",
-"NASHIK",
-"NAVI MUMBAI",
-"OSMANABAD ",
-"PANDHARPUR ",
-"PARBHANI",
-"PUNE",
-"SANGLI",
-"SHIRDI ",
-"SHRIRAMPUR",
-"SOLAPUR"];
+  citiesList=cityNamesList;
 
   monthlist= [ "January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December" ];
   constructor(public commonService: CommonService) { }
@@ -135,7 +104,7 @@ export class PersonalInfoComponent implements OnInit {
       }
 	  isNumber(value,msg){
 		if("" !== value.trim() &&isNaN(value)){
-			this.err.push(msg + " must be numeric");
+			this.err.push("Please enter valid value in "+msg);
 		}
 		}
       moveNext(){
@@ -148,7 +117,7 @@ export class PersonalInfoComponent implements OnInit {
         this.isEmpty(this.commonService.partidetails.lastname, "Surname");
         this.isEmpty(this.commonService.partidetails.addr1, "Address");
         this.isEmpty(this.commonService.partidetails.nameOfSchoolOrClub, "Name Of the School/Club");
-        this.isEmpty(this.commonService.partidetails.addressOfSchoolOrClub, "School/Club Address");
+        //this.isEmpty(this.commonService.partidetails.addressOfSchoolOrClub, "School/Club Address");
         this.isEmpty(this.commonService.partidetails.contactno, "Mobile Number");
 		this.isNumber(this.commonService.partidetails.contactno, "Mobile Number");
         this.isEmpty(this.commonService.partidetails.alternativeno, "Emergency Number");
@@ -159,11 +128,11 @@ export class PersonalInfoComponent implements OnInit {
         this.isEmpty(this.commonService.partidetails.pincode, "Pin Code");
 		this.isNumber(this.commonService.partidetails.pincode, "Pin Code");
 			
-        this.isEmpty(this.commonService.partidetails.schoolstate, "State of school");
+        /*this.isEmpty(this.commonService.partidetails.schoolstate, "State of school");
         this.isEmpty(this.commonService.partidetails.schoolcity, "City of school");
         this.isEmpty(this.commonService.partidetails.schoolpincode, "Code of school");
         this.isNumber(this.commonService.partidetails.schoolpincode, "Code of school");
-		
+		*/
 		if(this.err.length === 0){
             this.commonService.partidetails.age=this.yrs + "," + this.months;
             let temp={};
