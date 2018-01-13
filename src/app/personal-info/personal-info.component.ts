@@ -63,7 +63,7 @@ export class PersonalInfoComponent implements OnInit {
             if (this.valideDate) {
                 this.commonService.partidetails.dob = new Date(this.month + '/' + this.day + '/' + this.year);
                 let ageDifMs = new Date('01/01/2018').getTime() - new Date(this.month + '/' + this.day + '/' + this.year).getTime();
-                let abc = this.commonService.getAge((this.month) + ',' + this.day + ',' + this.year, "01/01/2018");
+                let abc = this.commonService.getAge((this.month) + '/' + this.day + '/' + this.year, "01/01/2018");
                 var ageDate = new Date(ageDifMs);
                 this.dayofbirth = abc["day"];
                 this.months = (abc["month"] < 0 || (abc["month"] == 0 && abc["day"] < 0)) ? 11 : abc["month"];
@@ -110,9 +110,9 @@ export class PersonalInfoComponent implements OnInit {
       moveNext(){
         this.err = [];
 		if(this.nameofSchool!=='other'){
-			this.commonService.partidetails.nameOfSchoolOrClub=this.nameofSchool;	
+			this.commonService.partidetails.nameOfSchoolOrClub=this.nameofSchool;
 		}
-		
+
         this.isEmpty(this.commonService.partidetails.firstname, "Name");
         this.isEmpty(this.commonService.partidetails.lastname, "Surname");
         this.isEmpty(this.commonService.partidetails.addr1, "Address");
@@ -127,7 +127,7 @@ export class PersonalInfoComponent implements OnInit {
         this.isEmpty(this.commonService.partidetails.city, "City");
         this.isEmpty(this.commonService.partidetails.pincode, "Pin Code");
 		this.isNumber(this.commonService.partidetails.pincode, "Pin Code");
-			
+
         /*this.isEmpty(this.commonService.partidetails.schoolstate, "State of school");
         this.isEmpty(this.commonService.partidetails.schoolcity, "City of school");
         this.isEmpty(this.commonService.partidetails.schoolpincode, "Code of school");
