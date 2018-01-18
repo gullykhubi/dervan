@@ -1,10 +1,14 @@
 <form>
   <div class="row">
-    <div class="form-group col-md-6  col-sm-12">
+    <div class="form-group col-md-4  col-sm-12">
       <label for="firstname">First Name <span class="astrik">*</span></label>
       <input class="form-control " id="firstname" name="firstname" [(ngModel)]="partidetails.firstname" placeholder="Name" required="" type="text">
     </div>
-    <div class="form-group col-md-6  col-sm-12">
+    <div class="form-group col-md-4  col-sm-12">
+      <label for="lastname">Middle Name</label>
+      <input class="form-control " id="middlename" name="middlename"  [(ngModel)]="partidetails.middlename" placeholder="Middle Name" required="" type="text">
+    </div>
+    <div class="form-group col-md-4  col-sm-12">
       <label for="lastname">Surname <span class="astrik">*</span></label>
       <input class="form-control " id="lastname" name="lastname"  [(ngModel)]="partidetails.lastname" placeholder="Surname" required="" type="text">
     </div>

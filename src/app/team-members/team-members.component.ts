@@ -23,7 +23,7 @@ export class TeamMembersComponent implements OnInit {
   isEmpty = function(n, e) {
     "" == n.trim() && this.err.push(e + " is Required")
   }
-  
+
 	  isNumber(value,msg){
 		if("" !== value.trim() &&isNaN(value)){
 			this.err.push("Please enter valid value in "+msg);
@@ -34,7 +34,7 @@ export class TeamMembersComponent implements OnInit {
   }
 
   ngOnInit() {
-    for(let i=1999; i<=new Date().getFullYear()-10;i++) {
+    for(let i=2000; i<=new Date().getFullYear()-10;i++) {
 			this.years.push(i);
 		}
   }
@@ -80,6 +80,17 @@ export class TeamMembersComponent implements OnInit {
             }
           }
   }
+
+  minimumLength(value,msg){
+    if(value.trim().length<3){
+      this.err.push(msg+" should minimum of 3 alphabets");
+    }
+  }
+  numberLenghtCheck(value){
+    if(value.trim().length<5 || value.trim().length>11){
+      this.err.push("Please enter valid Emergency Conatct Number");
+    }
+  }
   save(){
     this.err=[];
     if(this.commonService.eventSelected.length === 0){
@@ -95,17 +106,22 @@ export class TeamMembersComponent implements OnInit {
     });
     this.isEmpty(this.partidetails.firstname, "Name");
     this.isEmpty(this.partidetails.lastname, "Surname");
+
+    this.minimumLength(this.partidetails.firstname, "First Name");
+    this.minimumLength(this.partidetails.lastname, "Surname");
     this.isEmpty(this.partidetails.contactno, "Mobile Number");
 	this.isNumber(this.partidetails.contactno, "Mobile Number");
     this.isEmpty(this.partidetails.alternativeno, "Emergency Number");
     this.isNumber(this.partidetails.alternativeno, "Emergency Number");
+    this.numberLenghtCheck(this.partidetails.alternativeno);
     this.isEmpty(this.partidetails.email, "Email-Id");
     if(this.partidetails.day === '' || this.partidetails.month === '' || this.partidetails.year === ''){
       this.err.push("Enter the Date of Birth.");
       return false;
     }
     let age=this.commonService.getAge((this.partidetails.month) + ',' + this.partidetails.day + ',' + this.partidetails.year, "01/01/2018");
-    if(age.year>minAge[0]){
+
+    if((age.year === minAge[0] && age.month !== 0) || age.year>minAge[0]){
       this.err.push("Maximum age should be "+minAge[0]+" for the player");
       return false;
     }

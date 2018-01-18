@@ -10,6 +10,7 @@ import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { EventSelectionComponent } from './event-selection/event-selection.component';
 import { SubmitionMsgComponent } from './submition-msg/submition-msg.component';
 import { TeamMembersComponent } from './team-members/team-members.component';
+import { ConfirmationFormComponent } from './confirmation-form/confirmation-form.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { TeamMembersComponent } from './team-members/team-members.component';
     PersonalInfoComponent,
     EventSelectionComponent,
     SubmitionMsgComponent,
-    TeamMembersComponent
+    TeamMembersComponent,
+    ConfirmationFormComponent
   ],
   imports: [
     BrowserModule,

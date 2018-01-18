@@ -46,6 +46,7 @@ export class CommonService {
     teamMemberDetail = {
                     firstname: "",
                     lastname: "",
+                    middlename: "",
                     day: "",
                     month: "",
                     year: "",
@@ -57,6 +58,53 @@ export class CommonService {
                 }
     teamMemberDetailsList=[];
   constructor(private http : Http) { }
+  reset(){
+    this.teamMemberDetailsList=[]
+    this.selectMode = 'ind';
+    this.eventSelected =[]
+    this.selectedEventList=undefined;
+    this.currentPage = 'modeSelection';
+    this.partidetails={
+        "firstname": "",
+        "lastname": "",
+        "middlename": "",
+        "addr1": "",
+        "addr2": "",
+        "state": "",
+        "city": "",
+        "pincode": "",
+        "nameOfSchoolOrClub": "",
+        "addressOfSchoolOrClub": "",
+        "address2OfSchoolOrClub": "",
+        "schoolstate": "",
+        "schoolcity": "",
+        "schoolpincode": "",
+        "dob": "",
+        "age": "",
+        "contactno": "",
+        "alternativeno": "",
+        "email": "",
+        "gender": "",
+        "bankDetails": "",
+        "paymentdate": null,
+        "bloodgroup":'',
+        "identitynumber":'',
+        "identitytype":''
+      };
+      this.teamMemberDetail = {
+                      firstname: "",
+                      lastname: "",
+                      middlename: "",
+                      day: "",
+                      month: "",
+                      year: "",
+                      contactno: "",
+                      alternativeno: "",
+                      email: "",
+                      dob: "",
+                      bloodgroup:""
+                  }
+  }
   save(){
     const record={
       "record":{

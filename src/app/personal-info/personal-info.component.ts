@@ -13,6 +13,7 @@ import { CommonService } from "../common.service";
 export class PersonalInfoComponent implements OnInit {
   states = india_states;
   schoolNames=schoolnames;
+  tempCity:string='';
   nameofSchool="";
   years: any =[];
   yrs: any = 0;
@@ -29,10 +30,10 @@ export class PersonalInfoComponent implements OnInit {
   monthlist= [ "January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December" ];
   constructor(public commonService: CommonService) { }
   ngOnInit() {
-    for(let i=1999;i<=new Date().getFullYear()-10;i++) {
+    for(let i=2000;i<=new Date().getFullYear()-10;i++) {
 			this.years.push(i);
 		}
-    this.commonService.partidetails.gender='B';
+    //this.commonService.partidetails.gender='B';
   }
   isLeapyear(){
 		if(this.year!=undefined&&(((this.year % 4 == 0) && (this.year % 100 != 0)) || (this.year % 400 == 0)))
@@ -107,26 +108,47 @@ export class PersonalInfoComponent implements OnInit {
 			this.err.push("Please enter valid value in "+msg);
 		}
 		}
-      moveNext(){
-        this.err = [];
-		if(this.nameofSchool!=='other'){
-			this.commonService.partidetails.nameOfSchoolOrClub=this.nameofSchool;
+    minimumLength(value,msg){
+		if(value.trim().length<3){
+			this.err.push(msg+" should minimum of 3 alphabets");
 		}
-
+		}
+    numberLenghtCheck(value){
+      if(value.trim().length<5 || value.trim().length>11){
+  			this.err.push("Please enter valid Emergency Conatct Number");
+  		}
+    }
+    moveNext(){
+        this.err = [];
+		    if(this.nameofSchool!=='other'){
+			         this.commonService.partidetails.nameOfSchoolOrClub=this.nameofSchool;
+		    }
+        if(this.tempCity!=='other'){
+			         this.commonService.partidetails.city=this.tempCity;
+		    }
+        if(this.commonService.partidetails.gender=== undefined){
+          this.err.push("Please Select the Gender");
+        }
         this.isEmpty(this.commonService.partidetails.firstname, "Name");
         this.isEmpty(this.commonService.partidetails.lastname, "Surname");
+        this.minimumLength(this.commonService.partidetails.firstname, "First Name");
+        this.minimumLength(this.commonService.partidetails.lastname, "Surname");
         this.isEmpty(this.commonService.partidetails.addr1, "Address");
         this.isEmpty(this.commonService.partidetails.nameOfSchoolOrClub, "Name Of the School/Club");
         //this.isEmpty(this.commonService.partidetails.addressOfSchoolOrClub, "School/Club Address");
         this.isEmpty(this.commonService.partidetails.contactno, "Mobile Number");
-		this.isNumber(this.commonService.partidetails.contactno, "Mobile Number");
+		    this.isNumber(this.commonService.partidetails.contactno, "Mobile Number");
         this.isEmpty(this.commonService.partidetails.alternativeno, "Emergency Number");
-		this.isNumber(this.commonService.partidetails.alternativeno, "Emergency Number");
+		    this.isNumber(this.commonService.partidetails.alternativeno, "Emergency Number");
+
+		    this.numberLenghtCheck(this.commonService.partidetails.alternativeno);
         this.isEmpty(this.commonService.partidetails.email, "Email-Id");
         this.isEmpty(this.commonService.partidetails.state, "State");
         this.isEmpty(this.commonService.partidetails.city, "City");
         this.isEmpty(this.commonService.partidetails.pincode, "Pin Code");
-		this.isNumber(this.commonService.partidetails.pincode, "Pin Code");
+		    this.isNumber(this.commonService.partidetails.pincode, "Pin Code");
+        this.isEmpty(this.commonService.partidetails.identitytype, "Identity Document");
+		    this.isEmpty(this.commonService.partidetails.identitynumber, "Identity Number");
 
         /*this.isEmpty(this.commonService.partidetails.schoolstate, "State of school");
         this.isEmpty(this.commonService.partidetails.schoolcity, "City of school");

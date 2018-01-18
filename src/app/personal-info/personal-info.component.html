@@ -14,7 +14,7 @@
 	</div>
 	<div class="col-md-6">
 	<input *ngIf="nameofSchool=== 'other'" [(ngModel)]="commonService.partidetails.nameOfSchoolOrClub" class="form-control " id="txtnameOfSchoolOrClub" name="txtnameOfSchoolOrClub" type="text">
-	
+
 	</div></div>
 	<h3>Please enter Captain's Information</h3>
   </div>
@@ -73,11 +73,16 @@
       <div class="row">
         <div class="form-group   col-md-6  col-sm-12">
           <label for="city">City/Taluka <span class="astrik">*</span></label>
-          <select class="form-control " id="city" name="city" placeholder="City/Taluka" required=""  [(ngModel)]="commonService.partidetails.city" >
+          <select class="form-control " id="city" name="city" placeholder="City/Taluka" required=""  [(ngModel)]="tempCity" >
             <option *ngFor="let city of citiesList" [value]="city">
               {{city}}
             </option>
+            <option value="other">
+              Other
+            </option>
 			</select>
+      <input class="form-control mt-2" id="city" name="city" *ngIf="tempCity === 'other'"  [(ngModel)]="commonService.partidetails.city" placeholder="city" required="" type="text">
+
         </div>
         <div class="form-group  col-md-6  col-sm-12">
           <label for="pincode">Pin Code <span class="astrik">*</span></label>
@@ -111,7 +116,7 @@
 	</div>
 	<div class="col-md-6">
 	<input *ngIf="nameofSchool=== 'other'" [(ngModel)]="commonService.partidetails.nameOfSchoolOrClub" class="form-control " id="txtnameOfSchoolOrClub" name="txtnameOfSchoolOrClub" type="text">
-	
+
 	</div></div>
   </div>
   <!--div class="row"  *ngIf="commonService.selectMode === 'ind'">
@@ -210,15 +215,15 @@
   </div>
   <div class="row">
     <div class="form-group col-md-3  col-sm-12">
-      <label for="identitytype">Identity Type</label>
+      <label for="identitytype">Identity Document <span class="astrik">*</span></label>
       <select class="form-control"  [(ngModel)]="commonService.partidetails.identitytype" id="identitytype" name="identitytype">
-        <option value="aadhar">Aadhar Card</option>
+        <option value="Aadhar">Aadhar Card</option>
         <option value="SSC/HSC Certificate">SSC/HSC Certificate</option>
-        <option value="Bona fide Certificate">Bona fide Certificate</option>
+        <option value="Bona fide Certificate">Bonafide Certificate</option>
       </select>
     </div>
     <div class="form-group col-md-3  col-sm-12">
-      <label for="identitynumber">Identity Number</label>
+      <label for="identitynumber">Identity Number <span class="astrik">*</span></label>
       <input class="form-control"  [(ngModel)]="commonService.partidetails.identitynumber" id="identitynumber" name="identitynumber" placeholder="Identity Number" required="" type="text">
     </div>
   </div>

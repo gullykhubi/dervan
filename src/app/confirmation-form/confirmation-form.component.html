@@ -1,0 +1,152 @@
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <td>
+            {{isCaptain}} Name: {{this.commonService.partidetails.firstname+' '+this.commonService.partidetails.middlename+' '+this.commonService.partidetails.lastname}}
+          </td>
+          <td>
+            SCHOOL/CLUB/TEAM: {{this.commonService.partidetails.nameOfSchoolOrClub}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            DATE OF BIRTH: {{dateOfBirth}}
+          </td>
+          <td>
+            EMERGENCY PHONE: {{this.commonService.partidetails.alternativeno}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            ADDRESS: {{this.commonService.partidetails.addr1+", "+this.commonService.partidetails.city+"-"+this.commonService.partidetails.pincode+", "+this.commonService.partidetails.state}}
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            MOBILE: {{this.commonService.partidetails.contactno}}
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            ID Document: {{this.commonService.partidetails.identitytype}}
+          </td>
+          <td>
+            BLOOD GROUP: {{this.commonService.partidetails.bloodgroup}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            ID NUMBER: {{this.commonService.partidetails.identitynumber}}
+          </td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="this.commonService.selectMode === 'team'">
+      <h3>
+        Team Memeber Details
+      </h3>
+    <table class="table table-bordered mt-3" >
+      <thead>
+        <tr>
+          <td>
+            Sr No
+          </td>
+          <td>
+            Player Name
+          </td>
+          <td>
+            D.O.B
+          </td>
+          <td>
+            Number
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let member of this.commonService.teamMemberDetailsList; let ind = index ">
+          <td>
+            {{ind+1}}
+          </td>
+          <td>
+            {{member.firstname+ " " +member.lastname}}
+          </td>
+          <td>
+            {{member.day+'-'+member.month+'-'+member.year}}
+          </td>
+          <td>
+            {{member.contactno}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    <table class="table table-bordered mt-3">
+      <thead>
+        <tr>
+          <td>
+            Game#
+          </td>
+          <td>
+            Game Name
+          </td>
+          <td>
+            Game Type
+          </td>
+          <td>
+            Fees
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let game of this.commonService.eventSelected; let ind = index ">
+          <td>
+            {{ind+1}}
+          </td>
+          <td>
+            {{game.name}}
+          </td>
+          <td>
+            {{game.text}}
+          </td>
+          <td>
+            {{amount}}
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+            Total Amount Payable
+          </td>
+          <td>
+            {{this.commonService.eventSelected.length * amount}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+            Total Amount Payable after due date:
+          </td>
+          <td>
+            {{(this.commonService.eventSelected.length * amount + 25)}}
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>

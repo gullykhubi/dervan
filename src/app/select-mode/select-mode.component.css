@@ -25,3 +25,9 @@
 .modeSelection i {
     margin: 0 10px;
 }
+ol{
+  margin-top : 20px;
+  color:red;
+  font-size:14px;
+  font-weight: 900;
+}

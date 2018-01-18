@@ -8,6 +8,7 @@ import { CommonService } from "../common.service";
 })
 export class EventSelectionComponent implements OnInit {
   addMember: boolean=false;
+  conformationSelector=false;
   conditions:any={
     "BASKET BALL" : { "min" : 5 , "max" : 7 },
     "FOOTBALL" :{ "min" : 11 , "max" : 14},
@@ -72,9 +73,12 @@ export class EventSelectionComponent implements OnInit {
         return;
       }
     }
-    this.commonService.save();
+    this.conformationSelector = true
   }
   closeDialog(){
     this.addMember = false;
+  }
+  confirm(){
+    this.commonService.save();
   }
 }
