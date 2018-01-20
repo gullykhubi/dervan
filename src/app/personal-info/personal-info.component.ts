@@ -126,7 +126,7 @@ export class PersonalInfoComponent implements OnInit {
         if(this.tempCity!=='other'){
 			         this.commonService.partidetails.city=this.tempCity;
 		    }
-        if(this.commonService.partidetails.gender=== undefined){
+        if(this.commonService.partidetails.gender=== ""){
           this.err.push("Please Select the Gender");
         }
         this.isEmpty(this.commonService.partidetails.firstname, "Name");

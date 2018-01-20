@@ -24,27 +24,27 @@ export const events = {
         },
         {
           "9011": "SUB JR. INDIAN ROUND",
-          "minage": 17
+          "minage": 16
         },
         {
           "9012": "SUB JR. RECURVE ROUND",
-          "minage": 17
+          "minage": 16
         },
         {
           "9013": "SUB JR. COMPOUND ROUND",
-          "minage": 17
+          "minage": 16
         },
         {
           "9017": "JUNIOR INDIAN ROUND",
-          "minage": 19
+          "minage": 18
         },
         {
           "9018": "JUNIOR RECURVE ROUND",
-          "minage": 19
+          "minage": 18
         },
         {
           "9019": "JUNIOR COMPOUND ROUND",
-          "minage": 19
+          "minage": 18
         }
       ],
       "G": [
@@ -70,27 +70,27 @@ export const events = {
         },
         {
           "9014": "SUB JR. INDIAN ROUND",
-          "minage": 17
+          "minage": 16
         },
         {
           "9015": "SUB JR. RECURVE ROUND",
-          "minage": 17
+          "minage": 16
         },
         {
           "9016": "SUB JR. COMPOUND ROUND",
-          "minage": 17
+          "minage": 16
         },
         {
           "9020": "JUNIOR INDIAN ROUND",
-          "minage": 19
+          "minage": 18
         },
         {
           "9021": "JUNIOR RECURVE ROUND",
-          "minage": 19
+          "minage": 18
         },
         {
           "9022": "JUNIOR COMPOUND ROUND",
-          "minage": 19
+          "minage": 18
         }
       ]
     },
@@ -129,7 +129,7 @@ export const events = {
           "minage": 14
         },
         {
-          "9036": "UNDER 14 4 * 100 MTR HURDLE",
+          "9036": "UNDER 14 4 * 100 MTR RELAY",
           "minage": 14
         },
         {
@@ -173,7 +173,7 @@ export const events = {
           "minage": 16
         },
         {
-          "9055": "UNDER 16 DISCUS",
+          "9055": "UNDER 16 DISCUS THROW",
           "minage": 16
         },
         {
@@ -209,7 +209,7 @@ export const events = {
           "minage": 18
         },
         {
-          "9073": "UNDER 18 DISCUS",
+          "9073": "UNDER 18 DISCUS THROW",
           "minage": 18
         }
       ],
@@ -247,7 +247,7 @@ export const events = {
           "minage": 14
         },
         {
-          "9044": "UNDER 14 4 * 100 MTR HURDLE",
+          "9044": "UNDER 14 4 * 100 MTR RELAY",
           "minage": 14
         },
         {
@@ -291,7 +291,7 @@ export const events = {
           "minage": 16
         },
         {
-          "9063": "UNDER 16 DISCUS",
+          "9063": "UNDER 16 DISCUS THROW",
           "minage": 16
         },
         {
@@ -327,7 +327,7 @@ export const events = {
           "minage": 18
         },
         {
-          "9083": "UNDER 18 DISCUS",
+          "9083": "UNDER 18 DISCUS THROW",
           "minage": 18
         },
         {
@@ -343,12 +343,12 @@ export const events = {
           "minage": 14
         },
         {
-          "9088": "UNDER 17 SINGLE",
-          "minage": 17
+          "9088": "UNDER 16 SINGLE",
+          "minage": 16
         },
         {
-          "9089": "UNDER 19 SINGLE",
-          "minage": 19
+          "9089": "UNDER 18 SINGLE",
+          "minage": 18
         }
       ],
       "G": [
@@ -357,388 +357,420 @@ export const events = {
           "minage": 14
         },
         {
-          "9087": "UNDER 17 SINGLE",
-          "minage": 17
+          "9087": "UNDER 16 SINGLE",
+          "minage": 16
         },
         {
-          "9090": "UNDER 19 SINGLE",
-          "minage": 19
+          "9090": "UNDER 18 SINGLE",
+          "minage": 18
         }
       ]
     },
     "CARROM": {
       "B": [
         {
-          "9092": "UNDER 19 OPEN SINGLE",
-          "minage": 19
+          "9092": "UNDER 18 OPEN SINGLE",
+          "minage": 18
         }
       ],
       "G": [
         {
-          "9093": "UNDER 19 OPEN SINGLE",
-          "minage": 19
+          "9093": "UNDER 18 OPEN SINGLE",
+          "minage": 18
         }
       ]
     },
     "CHESS": {
       "B": [
         {
-          "9094": "UNDER 19 OPEN SINGLE",
-          "minage": 19
+          "9094": "UNDER 18 OPEN SINGLE",
+          "minage": 18
         }
       ],
       "G": [
         {
-          "9095": "UNDER 19 OPEN SINGLE",
-          "minage": 19
+          "9095": "UNDER 18 OPEN SINGLE",
+          "minage": 18
         }
       ]
     },
     "GYMNASTICS": {
       "B": [
         {
-          "9098": "UNDER 14 SINGLE",
-          "minage": 14
+          "9098": "UNDER 12 SINGLE",
+          "minage": 12
         },
         {
-          "9100": "UNDER 17 SINGLE",
-          "minage": 17
+          "9100": "UNDER 14 SINGLE",
+          "minage": 14
         }
       ],
       "G": [
         {
-          "9099": "UNDER 14 SINGLE",
-          "minage": 14
+          "9099": "UNDER 12 SINGLE",
+          "minage": 12
         },
         {
-          "9101": "UNDER 17 SINGLE",
-          "minage": 17
+          "9101": "UNDER 14 SINGLE",
+          "minage": 14
         }
       ]
     },
     "SHOOTING": {
       "B": [
         {
-          "9114": "UNDER 17 OPEN SIGHT",
-          "minage": 17
+          "9112": "UNDER 14 OPEN SIGHT",
+          "minage": 14
         },
         {
-          "9116": "UNDER 17 PIP SIGHT",
-          "minage": 17
+          "9114": "UNDER 14 PIP SIGHT",
+          "minage": 14
         },
         {
-          "9118": "UNDER 17 AIR PISTOL",
-          "minage": 17
+          "9116": "UNDER 14 AIR PISTOL",
+          "minage": 14
         },
         {
-          "9120": "UNDER 19 OPEN SIGHT",
-          "minage": 19
+          "9118": "UNDER 16 OPEN SIGHT",
+          "minage": 16
         },
         {
-          "9122": "UNDER 19 PIP SIGHT",
-          "minage": 19
+          "9120": "UNDER 16 PIP SIGHT",
+          "minage": 16
         },
         {
-          "9124": "UNDER 19 AIR PISTOL",
-          "minage": 19
+          "9122": "UNDER 16 AIR PISTOL",
+          "minage": 16
+        },
+        {
+          "9124": "UNDER 18 OPEN SIGHT",
+          "minage": 18
+        },
+        {
+          "9126": "UNDER 18 PIP SIGHT",
+          "minage": 18
+        },
+        {
+          "9128": "UNDER 18 AIR PISTOL",
+          "minage": 18
         }
       ],
       "G": [
         {
-          "9115": "UNDER 17 OPEN SIGHT",
-          "minage": 17
+          "9113": "UNDER 14 OPEN SIGHT",
+          "minage": 14
         },
         {
-          "9117": "UNDER 17 PIP SIGHT",
-          "minage": 17
+          "9115": "UNDER 14 PIP SIGHT",
+          "minage": 14
         },
         {
-          "9119": "UNDER 17 AIR PISTOL",
-          "minage": 17
+          "9117": "UNDER 14 AIR PISTOL",
+          "minage": 14
         },
         {
-          "9121": "UNDER 19 OPEN SIGHT",
-          "minage": 19
+          "9119": "UNDER 16 OPEN SIGHT",
+          "minage": 16
         },
         {
-          "9123": "UNDER 19 PIP SIGHT",
-          "minage": 19
+          "9121": "UNDER 16 PIP SIGHT",
+          "minage": 16
         },
         {
-          "9125": "UNDER 19 AIR PISTOL",
-          "minage": 19
+          "9123": "UNDER 16 AIR PISTOL",
+          "minage": 16
+        },
+        {
+          "9125": "UNDER 18 OPEN SIGHT",
+          "minage": 18
+        },
+        {
+          "9127": "UNDER 18 PIP SIGHT",
+          "minage": 18
+        },
+        {
+          "9129": "UNDER 18 AIR PISTOL",
+          "minage": 18
         }
       ]
     },
     "SWIMMING": {
       "B": [
         {
-          "9126": "UNDER 10 FREESTYLE 50 M",
+          "9130": "UNDER 10 FREESTYLE 50 M",
           "minage": 10
         },
         {
-          "9127": "UNDER 10 BACKSTROKE 50 M",
+          "9131": "UNDER 10 BACKSTROKE 50 M",
           "minage": 10
         },
         {
-          "9128": "UNDER 10 BREASTSTROKE 50 M",
+          "9132": "UNDER 10 BREASTSTROKE 50 M",
           "minage": 10
         },
         {
-          "9129": "UNDER 10 BUTTERFLY 50 M",
+          "9133": "UNDER 10 BUTTERFLY 50 M",
           "minage": 10
         },
         {
-          "9130": "UNDER 10 FREESTYLE 100 M",
+          "9134": "UNDER 10 FREESTYLE 100 M",
           "minage": 10
         },
         {
-          "9131": "UNDER 10 INDIVIDUAL MEDLEY 100 M",
+          "9135": "UNDER 10 INDIVIDUAL MEDLEY 100 M",
           "minage": 10
         },
         {
-          "9138": "UNDER 12 FREESTYLE 50 M",
+          "9142": "UNDER 12 FREESTYLE 50 M",
           "minage": 12
         },
         {
-          "9139": "UNDER 12 BACKSTROKE 50 M",
+          "9143": "UNDER 12 BACKSTROKE 50 M",
           "minage": 12
         },
         {
-          "9140": "UNDER 12 BREASTSTROKE 50 M",
+          "9144": "UNDER 12 BREASTSTROKE 50 M",
           "minage": 12
         },
         {
-          "9141": "UNDER 12 BUTTERFLY 50 M",
+          "9145": "UNDER 12 BUTTERFLY 50 M",
           "minage": 12
         },
         {
-          "9142": "UNDER 12 FREESTYLE 100 M",
+          "9146": "UNDER 12 FREESTYLE 100 M",
           "minage": 12
         },
         {
-          "9143": "UNDER 12 INDIVIDUAL MEDLEY 200 M",
+          "9147": "UNDER 12 INDIVIDUAL MEDLEY 200 M",
           "minage": 12
         },
         {
-          "9150": "UNDER 14 FREESTYLE 50 M",
+          "9154": "UNDER 14 FREESTYLE 50 M",
           "minage": 14
         },
         {
-          "9151": "UNDER 14 BACKSTROKE 50 M",
+          "9155": "UNDER 14 BACKSTROKE 50 M",
           "minage": 14
         },
         {
-          "9152": "UNDER 14 BREASTSTROKE 50 M",
+          "9156": "UNDER 14 BREASTSTROKE 50 M",
           "minage": 14
         },
         {
-          "9153": "UNDER 14 BUTTERFLY 50 M",
+          "9157": "UNDER 14 BUTTERFLY 50 M",
           "minage": 14
         },
         {
-          "9154": "UNDER 14 FREESTYLE 200 M",
+          "9158": "UNDER 14 FREESTYLE 200 M",
           "minage": 14
         },
         {
-          "9155": "UNDER 14 INDIVIDUAL MEDLEY 200 M",
+          "9159": "UNDER 14 INDIVIDUAL MEDLEY 200 M",
           "minage": 14
         },
         {
-          "9162": "UNDER 17 FREESTYLE 50 M",
-          "minage": 17
+          "9166": "UNDER 16 FREESTYLE 50 M",
+          "minage": 16
         },
         {
-          "9163": "UNDER 17 BACKSTROKE 50 M",
-          "minage": 17
+          "9167": "UNDER 16 BACKSTROKE 50 M",
+          "minage": 16
         },
         {
-          "9164": "UNDER 17 BREASTSTROKE 50 M",
-          "minage": 17
+          "9168": "UNDER 16 BREASTSTROKE 50 M",
+          "minage": 16
         },
         {
-          "9165": "UNDER 17 BUTTERFLY 50 M",
-          "minage": 17
+          "9169": "UNDER 16 BUTTERFLY 50 M",
+          "minage": 16
         },
         {
-          "9166": "UNDER 17 FREESTYLE 200 M",
-          "minage": 17
+          "9170": "UNDER 16 FREESTYLE 200 M",
+          "minage": 16
         },
         {
-          "9167": "UNDER 17 INDIVIDUAL MEDLEY 200 M",
-          "minage": 17
+          "9171": "UNDER 16 INDIVIDUAL MEDLEY 200 M",
+          "minage": 16
         }
       ],
       "G": [
         {
-          "9132": "UNDER 10 FREESTYLE 50 M",
+          "9136": "UNDER 10 FREESTYLE 50 M",
           "minage": 10
         },
         {
-          "9133": "UNDER 10 BACKSTROKE 50 M",
+          "9137": "UNDER 10 BACKSTROKE 50 M",
           "minage": 10
         },
         {
-          "9134": "UNDER 10 BREASTSTROKE 50 M",
+          "9138": "UNDER 10 BREASTSTROKE 50 M",
           "minage": 10
         },
         {
-          "9135": "UNDER 10 BUTTERFLY 50 M",
+          "9139": "UNDER 10 BUTTERFLY 50 M",
           "minage": 10
         },
         {
-          "9136": "UNDER 10 FREESTYLE 100 M",
+          "9140": "UNDER 10 FREESTYLE 100 M",
           "minage": 10
         },
         {
-          "9137": "UNDER 10 INDIVIDUAL MEDLEY 100 M",
+          "9141": "UNDER 10 INDIVIDUAL MEDLEY 100 M",
           "minage": 10
         },
         {
-          "9144": "UNDER 12 FREESTYLE 50 M",
+          "9148": "UNDER 12 FREESTYLE 50 M",
           "minage": 12
         },
         {
-          "9145": "UNDER 12 BACKSTROKE 50 M",
+          "9149": "UNDER 12 BACKSTROKE 50 M",
           "minage": 12
         },
         {
-          "9146": "UNDER 12 BREASTSTROKE 50 M",
+          "9150": "UNDER 12 BREASTSTROKE 50 M",
           "minage": 12
         },
         {
-          "9147": "UNDER 12 BUTTERFLY 50 M",
+          "9151": "UNDER 12 BUTTERFLY 50 M",
           "minage": 12
         },
         {
-          "9148": "UNDER 12 FREESTYLE 100 M",
+          "9152": "UNDER 12 FREESTYLE 100 M",
           "minage": 12
         },
         {
-          "9149": "UNDER 12 INDIVIDUAL MEDLEY 200 M",
+          "9153": "UNDER 12 INDIVIDUAL MEDLEY 200 M",
           "minage": 12
         },
         {
-          "9156": "UNDER 14 FREESTYLE 50 M",
+          "9160": "UNDER 14 FREESTYLE 50 M",
           "minage": 14
         },
         {
-          "9157": "UNDER 14 BACKSTROKE 50 M",
+          "9161": "UNDER 14 BACKSTROKE 50 M",
           "minage": 14
         },
         {
-          "9158": "UNDER 14 BREASTSTROKE 50 M",
+          "9162": "UNDER 14 BREASTSTROKE 50 M",
           "minage": 14
         },
         {
-          "9159": "UNDER 14 BUTTERFLY 50 M",
+          "9163": "UNDER 14 BUTTERFLY 50 M",
           "minage": 14
         },
         {
-          "9160": "UNDER 14 FREESTYLE 2000 M",
+          "9164": "UNDER 14 FREESTYLE 2000 M",
           "minage": 14
         },
         {
-          "9161": "UNDER 14 INDIVIDUAL MEDLEY 200 M",
+          "9165": "UNDER 14 INDIVIDUAL MEDLEY 200 M",
           "minage": 14
         },
         {
-          "9168": "UNDER 17 FREESTYLE 50 M",
-          "minage": 17
+          "9172": "UNDER 16 FREESTYLE 50 M",
+          "minage": 16
         },
         {
-          "9169": "UNDER 17 BACKSTROKE 50 M",
-          "minage": 17
+          "9173": "UNDER 16 BACKSTROKE 50 M",
+          "minage": 16
         },
         {
-          "9170": "UNDER 17 BREASTSTROKE 50 M",
-          "minage": 17
+          "9174": "UNDER 16 BREASTSTROKE 50 M",
+          "minage": 16
         },
         {
-          "9171": "UNDER 17 BUTTERFLY 50 M",
-          "minage": 17
+          "9175": "UNDER 16 BUTTERFLY 50 M",
+          "minage": 16
         },
         {
-          "9172": "UNDER 17 FREESTYLE 2000 M",
-          "minage": 17
+          "9176": "UNDER 16 FREESTYLE 2000 M",
+          "minage": 16
         },
         {
-          "9173": "UNDER 17 INDIVIDUAL MEDLEY 200 M",
-          "minage": 17
+          "9177": "UNDER 16 INDIVIDUAL MEDLEY 200 M",
+          "minage": 16
         }
       ]
     },
     "TT": {
       "B": [
         {
-          "9182": "UNDER 14 SINGLE",
+          "9186": "UNDER 14 SINGLE",
           "minage": 14
         },
         {
-          "9184": "UNDER 17 SINGLE",
-          "minage": 17
+          "9188": "UNDER 16 SINGLE",
+          "minage": 16
         },
         {
-          "9186": "UNDER 19 SINGLE",
-          "minage": 19
+          "9190": "UNDER 18 SINGLE",
+          "minage": 18
         }
       ],
       "G": [
         {
-          "9183": "UNDER 14 SINGLE",
+          "9187": "UNDER 14 SINGLE",
           "minage": 14
         },
         {
-          "9185": "UNDER 17 SINGLE",
-          "minage": 17
+          "9189": "UNDER 16 SINGLE",
+          "minage": 16
         },
         {
-          "9187": "UNDER 19 SINGLE",
-          "minage": 19
+          "9191": "UNDER 18 SINGLE",
+          "minage": 18
         }
       ]
     },
     "WALL CLIMBING": {
       "B": [
         {
-          "9190": "UNDER 17 SINGLE",
-          "minage": 17
+          "9193": "UNDER 16 SINGLE",
+          "minage": 16
         },
         {
-          "9192": "UNDER 19 SINGLE",
-          "minage": 19
+          "9195": "UNDER 18 SINGLE",
+          "minage": 18
         }
       ],
       "G": [
         {
-          "9191": "UNDER 17 SINGLE",
-          "minage": 17
+          "9194": "UNDER 16 SINGLE",
+          "minage": 16
         },
         {
-          "9193": "UNDER 19 SINGLE",
-          "minage": 19
+          "9196": "UNDER 18 SINGLE",
+          "minage": 18
         }
       ]
     },
     "YOGA": {
       "B": [
         {
-          "9194": "UNDER 14 SINGLE",
+          "9197": "UNDER 12 SINGLE",
+          "minage": 12
+        },
+        {
+          "9199": "UNDER 14 SINGLE",
           "minage": 14
         },
         {
-          "9196": "UNDER 17 SINGLE",
-          "minage": 17
+          "9201": "UNDER 16 SINGLE",
+          "minage": 16
         }
       ],
       "G": [
         {
-          "9195": "UNDER 14 SINGLE",
+          "9198": "UNDER 12 SINGLE",
+          "minage": 12
+        },
+        {
+          "9200": "UNDER 14 SINGLE",
           "minage": 14
         },
         {
-          "9197": "UNDER 17 SINGLE",
-          "minage": 17
+          "9202": "UNDER 16 SINGLE",
+          "minage": 16
         }
       ]
     }
@@ -765,8 +797,8 @@ export const events = {
     "BASKET BALL": {
       "B": [
         {
-          "9091": "UNDER 19 TEAM",
-          "minage": 19
+          "9091": "UNDER 18 TEAM",
+          "minage": 18
         }
       ]
     },
@@ -777,8 +809,8 @@ export const events = {
           "minage": 14
         },
         {
-          "9097": "UNDER 17 TEAM",
-          "minage": 17
+          "9097": "UNDER 16 TEAM",
+          "minage": 16
         }
       ]
     },
@@ -831,70 +863,58 @@ export const events = {
         {
           "9110": "UNDER 14 TEAM",
           "minage": 14
-        },
-        {
-          "9112": "UNDER 17 TEAM",
-          "minage": 17
         }
       ],
       "G": [
         {
           "9111": "UNDER 14 TEAM",
           "minage": 14
-        },
-        {
-          "9113": "UNDER 17 TEAM",
-          "minage": 17
         }
       ]
     },
     "SWIMMING": {
       "B": [
         {
-          "9174": "U10 & U12 MIX RELAY 4X50 FREESTYLE",
+          "9178": "U10 & U12 MIX RELAY 4X50 FREESTYLE",
           "minage": 12
         },
         {
-          "9176": "U14 & U17 MIX RELAY 4X50 FREESTYLE",
-          "minage": 17
+          "9180": "U14 & U16 MIX RELAY 4X50 FREESTYLE",
+          "minage": 16
         },
         {
-          "9178": "U10 & U12 MIX RELAY 4X50 IND MEDLAY",
+          "9182": "U10 & U12 MIX RELAY 4X50 IND MEDLAY",
           "minage": 12
         },
         {
-          "9180": "U14 & U17 MIX RELAY 4X50 IND MEDLAY",
-          "minage": 17
+          "9184": "U14 & U16 MIX RELAY 4X50 IND MEDLAY",
+          "minage": 16
         }
       ],
       "G": [
         {
-          "9175": "U10 & U12 MIX RELAY 4X50 FREESTYLE",
+          "9179": "U10 & U12 MIX RELAY 4X50 FREESTYLE",
           "minage": 12
         },
         {
-          "9177": "U14 & U17 MIX RELAY 4X50 FREESTYLE",
-          "minage": 17
+          "9181": "U14 & U16 MIX RELAY 4X50 FREESTYLE",
+          "minage": 16
         },
         {
-          "9179": "U10 & U12 MIX RELAY 4X50 IND MEDLAY",
+          "9183": "U10 & U12 MIX RELAY 4X50 IND MEDLAY",
           "minage": 12
         },
         {
-          "9181": "U14 & U17 MIX RELAY 4X50 IND MEDLAY",
-          "minage": 17
+          "9185": "U14 & U16 MIX RELAY 4X50 IND MEDLAY",
+          "minage": 16
         }
       ]
     },
     "VOLLEYBALL": {
       "B": [
         {
-          "9188": "UNDER 17 TEAM",
-          "minage": 17
-        },
-        {
-          "9189": "UNDER 19 TEAM",
-          "minage": 19
+          "9192": "UNDER 18 TEAM",
+          "minage": 18
         }
       ]
     }

@@ -71,7 +71,7 @@ export class TeamMembersComponent implements OnInit {
             }
             if (this.valideDate) {
                 let ageDifMs = new Date('01/01/2018').getTime() - new Date(this.partidetails.month + '/' + this.partidetails.day + '/' + this.partidetails.year).getTime();
-                let abc = this.commonService.getAge((this.partidetails.month) + ',' + this.partidetails.day + ',' + this.partidetails.year, "01/01/2018");
+                let abc = this.commonService.getAge((this.partidetails.month) + '/' + this.partidetails.day + '/' + this.partidetails.year, "01/01/2018");
                 var ageDate = new Date(ageDifMs);
                 this.dayofbirth = abc["day"];
                 this.months = (abc["month"] < 0 || (abc["month"] == 0 && abc["day"] < 0)) ? 11 : abc["month"];
@@ -125,10 +125,12 @@ export class TeamMembersComponent implements OnInit {
       this.err.push("Maximum age should be "+minAge[0]+" for the player");
       return false;
     }
-    this.partidetails.dob = new Date(this.partidetails.month + '/' + this.partidetails.day + '/' + this.partidetails.year);
-    this.commonService.teamMemberDetailsList.push(this.partidetails);
-    this.partidetails = JSON.parse(JSON.stringify(this.commonService.teamMemberDetail));
-    this.close.emit('close');
+    if( this.err.length === 0 ){
+      this.partidetails.dob = new Date(this.partidetails.month + '/' + this.partidetails.day + '/' + this.partidetails.year);
+      this.commonService.teamMemberDetailsList.push(this.partidetails);
+      this.partidetails = JSON.parse(JSON.stringify(this.commonService.teamMemberDetail));
+      this.close.emit('close');
+    }
   }
   cancel() {
     this.close.emit('close');

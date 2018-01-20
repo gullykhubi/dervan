@@ -19,7 +19,7 @@ pdf: any;
   print(){
     let item = {firstName: 'Peter', lastName: 'Parker'};
     this.pdf = pdfMake;
-    this.pdf.createPdf(this.buildPdf(item)).open();
+    this.pdf.createPdf(this.buildPdf(item)).download('form.pdf');
   }
   buildPdf(value) {
      var pdfContent = value;

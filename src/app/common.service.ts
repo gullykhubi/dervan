@@ -118,9 +118,10 @@ export class CommonService {
     const headers = new Headers();
         headers.append('Content-Type', 'application/json');
         headers.append('authentication', `hello`);
-        headers.append('HttpHeaderForm','');
+        headers.append('HttpHeaderForm','123');
 
        const options = new RequestOptions({headers: headers});
+       
     this.http.post("poll_vote1.php", record ,options ).map((res:any)=> {
                     return res.json()
                 }).subscribe((e:any) => {
