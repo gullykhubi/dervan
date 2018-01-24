@@ -51,7 +51,7 @@
     </table>
     <div *ngIf="this.commonService.selectMode === 'team'">
       <h3>
-        Team Memeber Details
+        Team Member Details
       </h3>
     <table class="table table-bordered mt-3" >
       <thead>
@@ -128,7 +128,7 @@
           <td>
           </td>
           <td>
-            Total Amount Payable
+            Total Amount
           </td>
           <td>
             {{this.commonService.eventSelected.length * amount}}
@@ -140,10 +140,22 @@
           <td>
           </td>
           <td>
-            Total Amount Payable after due date:
+            G.S.T 18%:
           </td>
           <td>
-            {{(this.commonService.eventSelected.length * amount + 25)}}
+            {{this.commonService.eventSelected.length * amount*0.18}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+            Total Amount Payable:
+          </td>
+          <td>
+            {{(this.commonService.eventSelected.length * amount + this.commonService.eventSelected.length * amount*0.18)}}
           </td>
         </tr>
       </tfoot>

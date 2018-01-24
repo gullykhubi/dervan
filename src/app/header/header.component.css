@@ -32,6 +32,7 @@ h2, h3 {
 img {
     vertical-align: middle;
     position: absolute;
-    width: 120px;
+    width: auto;
     height: 110px;
+    display: none;
 }

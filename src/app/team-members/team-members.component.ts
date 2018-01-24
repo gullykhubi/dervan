@@ -86,9 +86,9 @@ export class TeamMembersComponent implements OnInit {
       this.err.push(msg+" should minimum of 3 alphabets");
     }
   }
-  numberLenghtCheck(value){
-    if(value.trim().length<5 || value.trim().length>11){
-      this.err.push("Please enter valid Emergency Conatct Number");
+  numberLenghtCheck(value, minLength, maxLength, msg){
+    if(value.trim().length< minLength || value.trim().length > maxLength){
+      this.err.push("Please enter valid "+msg);
     }
   }
   save(){
@@ -110,10 +110,11 @@ export class TeamMembersComponent implements OnInit {
     this.minimumLength(this.partidetails.firstname, "First Name");
     this.minimumLength(this.partidetails.lastname, "Surname");
     this.isEmpty(this.partidetails.contactno, "Mobile Number");
-	this.isNumber(this.partidetails.contactno, "Mobile Number");
+	  this.isNumber(this.partidetails.contactno, "Mobile Number");
     this.isEmpty(this.partidetails.alternativeno, "Emergency Number");
     this.isNumber(this.partidetails.alternativeno, "Emergency Number");
-    this.numberLenghtCheck(this.partidetails.alternativeno);
+    this.numberLenghtCheck(this.partidetails.contactno, 10, 10, 'Mobile Number');
+    this.numberLenghtCheck(this.partidetails.alternativeno, 5, 12, 'Emergency Contact Number');
     this.isEmpty(this.partidetails.email, "Email-Id");
     if(this.partidetails.day === '' || this.partidetails.month === '' || this.partidetails.year === ''){
       this.err.push("Enter the Date of Birth.");

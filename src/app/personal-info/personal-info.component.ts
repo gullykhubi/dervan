@@ -113,9 +113,9 @@ export class PersonalInfoComponent implements OnInit {
 			this.err.push(msg+" should minimum of 3 alphabets");
 		}
 		}
-    numberLenghtCheck(value){
-      if(value.trim().length<5 || value.trim().length>11){
-  			this.err.push("Please enter valid Emergency Conatct Number");
+    numberLenghtCheck(value, minLength, maxLength, msg){
+      if(value.trim().length< minLength || value.trim().length > maxLength){
+  			this.err.push("Please enter valid "+msg);
   		}
     }
     moveNext(){
@@ -140,8 +140,8 @@ export class PersonalInfoComponent implements OnInit {
 		    this.isNumber(this.commonService.partidetails.contactno, "Mobile Number");
         this.isEmpty(this.commonService.partidetails.alternativeno, "Emergency Number");
 		    this.isNumber(this.commonService.partidetails.alternativeno, "Emergency Number");
-
-		    this.numberLenghtCheck(this.commonService.partidetails.alternativeno);
+        this.numberLenghtCheck(this.commonService.partidetails.contactno, 10, 10, 'Mobile Number');
+		    this.numberLenghtCheck(this.commonService.partidetails.alternativeno, 5, 12, 'Emergency Contact Number');
         this.isEmpty(this.commonService.partidetails.email, "Email-Id");
         this.isEmpty(this.commonService.partidetails.state, "State");
         this.isEmpty(this.commonService.partidetails.city, "City");
@@ -149,6 +149,9 @@ export class PersonalInfoComponent implements OnInit {
 		    this.isNumber(this.commonService.partidetails.pincode, "Pin Code");
         this.isEmpty(this.commonService.partidetails.identitytype, "Identity Document");
 		    this.isEmpty(this.commonService.partidetails.identitynumber, "Identity Number");
+        if(this.commonService.partidetails.identitytype === 'Aadhar'){
+          this.numberLenghtCheck(this.commonService.partidetails.identitynumber, 12, 12, 'Aadhar Number');
+        }
 
         /*this.isEmpty(this.commonService.partidetails.schoolstate, "State of school");
         this.isEmpty(this.commonService.partidetails.schoolcity, "City of school");

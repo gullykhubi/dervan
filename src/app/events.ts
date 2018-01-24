@@ -129,10 +129,6 @@ export const events = {
           "minage": 14
         },
         {
-          "9036": "UNDER 14 4 * 100 MTR RELAY",
-          "minage": 14
-        },
-        {
           "9037": "UNDER 14 LONG JUMP",
           "minage": 14
         },
@@ -142,10 +138,6 @@ export const events = {
         },
         {
           "9039": "UNDER 14 SHOT PUT",
-          "minage": 14
-        },
-        {
-          "9040": "UNDER 14 DISCUS",
           "minage": 14
         },
         {
@@ -201,10 +193,6 @@ export const events = {
           "minage": 18
         },
         {
-          "9071": "UNDER 18 HIGH JUMP",
-          "minage": 18
-        },
-        {
           "9072": "UNDER 18 SHOT PUT",
           "minage": 18
         },
@@ -247,10 +235,6 @@ export const events = {
           "minage": 14
         },
         {
-          "9044": "UNDER 14 4 * 100 MTR RELAY",
-          "minage": 14
-        },
-        {
           "9045": "UNDER 14 LONG JUMP",
           "minage": 14
         },
@@ -260,10 +244,6 @@ export const events = {
         },
         {
           "9047": "UNDER 14 SHOT PUT",
-          "minage": 14
-        },
-        {
-          "9048": "UNDER 14 DISCUS",
           "minage": 14
         },
         {
@@ -319,19 +299,11 @@ export const events = {
           "minage": 18
         },
         {
-          "9081": "UNDER 18 HIGH JUMP",
-          "minage": 18
-        },
-        {
           "9082": "UNDER 18 SHOT PUT",
           "minage": 18
         },
         {
           "9083": "UNDER 18 DISCUS THROW",
-          "minage": 18
-        },
-        {
-          "9084": "UNDER 18 4*100 RELAY",
           "minage": 18
         }
       ]
@@ -423,11 +395,11 @@ export const events = {
           "minage": 14
         },
         {
-          "9114": "UNDER 14 PIP SIGHT",
+          "9114": "UNDER 14 PEEP SIGHT",
           "minage": 14
         },
         {
-          "9116": "UNDER 14 AIR PISTOL",
+          "9116": "UNDER 14 AIR RIFLE",
           "minage": 14
         },
         {
@@ -435,11 +407,11 @@ export const events = {
           "minage": 16
         },
         {
-          "9120": "UNDER 16 PIP SIGHT",
+          "9120": "UNDER 16 PEEP SIGHT",
           "minage": 16
         },
         {
-          "9122": "UNDER 16 AIR PISTOL",
+          "9122": "UNDER 16 AIR RIFLE",
           "minage": 16
         },
         {
@@ -447,11 +419,11 @@ export const events = {
           "minage": 18
         },
         {
-          "9126": "UNDER 18 PIP SIGHT",
+          "9126": "UNDER 18 PEEP SIGHT",
           "minage": 18
         },
         {
-          "9128": "UNDER 18 AIR PISTOL",
+          "9128": "UNDER 18 AIR RIFLE",
           "minage": 18
         }
       ],
@@ -461,11 +433,11 @@ export const events = {
           "minage": 14
         },
         {
-          "9115": "UNDER 14 PIP SIGHT",
+          "9115": "UNDER 14 PEEP SIGHT",
           "minage": 14
         },
         {
-          "9117": "UNDER 14 AIR PISTOL",
+          "9117": "UNDER 14 AIR RIFLE",
           "minage": 14
         },
         {
@@ -473,11 +445,11 @@ export const events = {
           "minage": 16
         },
         {
-          "9121": "UNDER 16 PIP SIGHT",
+          "9121": "UNDER 16 PEEP SIGHT",
           "minage": 16
         },
         {
-          "9123": "UNDER 16 AIR PISTOL",
+          "9123": "UNDER 16 AIR RIFLE",
           "minage": 16
         },
         {
@@ -485,11 +457,11 @@ export const events = {
           "minage": 18
         },
         {
-          "9127": "UNDER 18 PIP SIGHT",
+          "9127": "UNDER 18 PEEP SIGHT",
           "minage": 18
         },
         {
-          "9129": "UNDER 18 AIR PISTOL",
+          "9129": "UNDER 18 AIR RIFLE",
           "minage": 18
         }
       ]
@@ -541,7 +513,7 @@ export const events = {
           "minage": 12
         },
         {
-          "9147": "UNDER 12 INDIVIDUAL MEDLEY 200 M",
+          "9147": "UNDER 12 INDIVIDUAL MEDLEY 100 M",
           "minage": 12
         },
         {
@@ -639,7 +611,7 @@ export const events = {
           "minage": 12
         },
         {
-          "9153": "UNDER 12 INDIVIDUAL MEDLEY 200 M",
+          "9153": "UNDER 12 INDIVIDUAL MEDLEY 100 M",
           "minage": 12
         },
         {
@@ -779,6 +751,10 @@ export const events = {
     "ATHLETICS": {
       "B": [
         {
+          "9036": "UNDER 14 4 * 100 MTR RELAY",
+          "minage": 14
+        },
+        {
           "9056": "UNDER 16 4*100 RELAY",
           "minage": 16
         },
@@ -789,8 +765,16 @@ export const events = {
       ],
       "G": [
         {
+          "9044": "UNDER 14 4 * 100 MTR RELAY",
+          "minage": 14
+        },
+        {
           "9064": "UNDER 16 4*100 RELAY",
           "minage": 16
+        },
+        {
+          "9084": "UNDER 18 4*100 RELAY",
+          "minage": 18
         }
       ]
     },
@@ -874,41 +858,41 @@ export const events = {
     },
     "SWIMMING": {
       "B": [
-        {
-          "9178": "U10 & U12 MIX RELAY 4X50 FREESTYLE",
-          "minage": 12
-        },
-        {
-          "9180": "U14 & U16 MIX RELAY 4X50 FREESTYLE",
-          "minage": 16
-        },
-        {
-          "9182": "U10 & U12 MIX RELAY 4X50 IND MEDLAY",
-          "minage": 12
-        },
-        {
-          "9184": "U14 & U16 MIX RELAY 4X50 IND MEDLAY",
-          "minage": 16
-        }
-      ],
-      "G": [
-        {
-          "9179": "U10 & U12 MIX RELAY 4X50 FREESTYLE",
-          "minage": 12
-        },
-        {
-          "9181": "U14 & U16 MIX RELAY 4X50 FREESTYLE",
-          "minage": 16
-        },
-        {
-          "9183": "U10 & U12 MIX RELAY 4X50 IND MEDLAY",
-          "minage": 12
-        },
-        {
-          "9185": "U14 & U16 MIX RELAY 4X50 IND MEDLAY",
-          "minage": 16
-        }
-      ]
+      {
+        "9178": "U10 & U12 MIX RELAY 4X50 FREESTYLE",
+        "minage": 12
+      },
+      {
+        "9180": "U14 & U16 MIX RELAY 4X50 FREESTYLE",
+        "minage": 16
+      },
+      {
+        "9182": "U10 & U12 MIX RELAY 4X50 IND MEDLAY",
+        "minage": 12
+      },
+      {
+        "9184": "U14 & U16 MIX RELAY 4X50 IND MEDLAY",
+        "minage": 16
+      }
+    ],
+    "G": [
+      {
+        "9179": "U10 & U12 MIX RELAY 4X50 FREESTYLE",
+        "minage": 12
+      },
+      {
+        "9181": "U14 & U16 MIX RELAY 4X50 FREESTYLE",
+        "minage": 16
+      },
+      {
+        "9183": "U10 & U12 MIX RELAY 4X50 IND MEDLAY",
+        "minage": 12
+      },
+      {
+        "9185": "U14 & U16 MIX RELAY 4X50 IND MEDLAY",
+        "minage": 16
+      }
+    ]
     },
     "VOLLEYBALL": {
       "B": [

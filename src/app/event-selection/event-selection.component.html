@@ -15,13 +15,13 @@
   </div>
   <div *ngIf="commonService.selectMode === 'team'" class="row" >
     <div class="col-md-4 ">
-    <p>Select Category</p>
+    <p>Select Game</p>
     <div *ngFor="let decipline of commonService.list[commonService.selectMode]" class="individual-checboxs">
       <span *ngIf="commonService.selectedEventList[decipline] !== undefined && commonService.selectedEventList[decipline].length > 0"><input class="form-check-input" type="radio"  name="disipline" (click)="selectDecipline(decipline)">{{decipline}}</span>
     </div>
   </div>
     <div *ngIf="this.selectedDiscipline!=undefined && commonService.selectedEventList[this.selectedDiscipline].length>0" class="col-md-8">
-      <p>Select Game</p>
+      <p>Select Category</p>
        <div  *ngFor="let e of commonService.selectedEventList[this.selectedDiscipline]" class="individual-checboxs" (click)="addorremove($event,e,this.selectedDiscipline)">
 
          <input class="form-check-input" type="checkbox">{{e[getKey(e)[0]]}}
