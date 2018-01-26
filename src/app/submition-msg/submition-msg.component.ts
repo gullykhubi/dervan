@@ -154,7 +154,7 @@ pdf: any;
 				        {text :'Original and a photocopy / xerox of the Identity card e.g. Aadhar card as is provided by the participant at the time of registration;',margin:[0,5,0,0]}
 			        ]
 		        }]},
-		        {text :'SVJCT Sports Academy Management reserves all rights to modify/alter/change, add/insert etc. any of the term(s) and condition(s) including as mentioned hereinabove above in respect of the DYG 2018 as it deems fit and proper.',margin:[0,5,0,0]}
+		        {text :'SVJCT Sports Academy Management reserves all rights to modify/change, add/cancel etc. any of the event in respect of the DYG 2018 as it deems fit and proper.',margin:[0,5,0,0]}
 			]
 		}]};
   }
