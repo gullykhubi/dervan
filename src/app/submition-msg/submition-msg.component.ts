@@ -135,7 +135,7 @@ pdf: any;
 			    ol: [
 			        {
 			        stack:[
-			            {text:'Payment  to be made at SVJCT Sports Complex Office, Dervanin case of cash payment.',margin:[0,5,0,0]}
+			            {text:'Payment  to be made at SVJCT Sports Complex Office, Dervan in case of cash payment. Payment can also be made in cash or  through Net-banking to the credit of  bank account  mentioned above.',margin:[0,5,0,0]}
 			            /*{text :'Bank Account no. :141110200017659',margin:[0,5,0,0]},
 			            {text :'Account Name:Vithalrao Joshi Charities Trust',margin:[0,5,0,0]},
 			            {text :'Bank Name & Branch: Bank of India, Chiplun Branch, Ayeshabi Complex, Bazaar Peth, Chiplun, Ratnagiri, Maharashtra',margin:[0,5,0,0]},
