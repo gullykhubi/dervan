@@ -151,8 +151,10 @@ pdf: any;
 			        ol: [
 				        {text :'printout of the dully filled registration form alongwith payment receipt issued by the office of SVJCT Sports Academy;',margin:[0,5,0,0]},
 				        {text :'two latest photograph;',margin:[0,5,0,0]},
-				        {text :'Original and a photocopy / xerox of the Identity card e.g. Aadhar card as is provided by the participant at the time of registration;',margin:[0,5,0,0]}
-			        ]
+				        {text :'Original and a photocopy / xerox of the Identity card e.g. Aadhar card as is provided by the participant at the time of registration;',margin:[0,5,0,0]},
+                {text :'Documents/Information provided by participants is presumed to be authentic.',margin:[0,5,0,0]},
+                {text :'Participants having only year of birth on their Aadhar card must carry alternative proof of birth date in original. ( eg. Birth date Certificate signed and stamped by school principal)',margin:[0,5,0,0]}
+              ]
 		        }]},
 		        {text :'SVJCT Sports Academy Management reserves all rights to modify/change, add/cancel etc. any of the event in respect of the DYG 2018 as it deems fit and proper.',margin:[0,5,0,0]}
 			]

@@ -34,7 +34,7 @@ export class TeamMembersComponent implements OnInit {
   }
 
   ngOnInit() {
-    for(let i=2000; i<=new Date().getFullYear()-10;i++) {
+    for(let i=2000; i<=new Date().getFullYear()-8;i++) {
 			this.years.push(i);
 		}
   }

@@ -30,7 +30,7 @@ export class PersonalInfoComponent implements OnInit {
   monthlist= [ "January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December" ];
   constructor(public commonService: CommonService) { }
   ngOnInit() {
-    for(let i=2000;i<=new Date().getFullYear()-10;i++) {
+    for(let i=2000;i<=new Date().getFullYear()-8;i++) {
 			this.years.push(i);
 		}
     //this.commonService.partidetails.gender='B';
