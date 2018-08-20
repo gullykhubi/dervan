@@ -9,6 +9,7 @@ import { CommonService } from "../common.service";
 export class EventSelectionComponent implements OnInit {
   addMember: boolean=false;
   conformationSelector=false;
+  isSubmited=false;
   conditions:any={
     "BASKET BALL" : { "min" : 5 , "max" : 7 },
     "FOOTBALL" :{ "min" : 11 , "max" : 14},
@@ -79,6 +80,7 @@ export class EventSelectionComponent implements OnInit {
     this.addMember = false;
   }
   confirm(){
+    this.isSubmited=true;
     this.commonService.save();
   }
 }
