@@ -15,7 +15,7 @@ export class ConfirmationFormComponent implements OnInit {
     this.isCaptain=this.commonService.selectMode=== 'ind'?"":"Captain ";
     let dob=new Date(this.commonService.partidetails.dob);
     this.dateOfBirth = dob.getDate()+'-'+ (dob.getMonth() + 1 ) + '-'+ dob.getFullYear();
-    this.amount = this.commonService.selectMode === 'team' ? 500 : 100;
+    this.amount = 70//this.commonService.selectMode === 'team' ? 500 : 100;
   }
 
 }

@@ -10,6 +10,7 @@ export class SelectModeComponent implements OnInit {
   constructor(public commonService: CommonService) { }
 
   ngOnInit() {
+    this.commonService.selectMode = 'ind'
   }
 
 }

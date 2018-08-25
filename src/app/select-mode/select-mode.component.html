@@ -1,17 +1,20 @@
 <div class="row selectModeContainer">
   <h6 class="col-md-12 col-sm-12  text-center"  style="font-weight:bold">
-    Select the Event Category
+    Event Category
   </h6>
   <div class="col-md-12 col-sm-12 text-center modeSelection">
     <div>
-      <span class="ind selected" [ngClass]="{'selected' : this.commonService.selectMode === 'ind'}" (click)="this.commonService.selectMode = 'ind'">
+      <span class="ind selected" [ngClass]="{'selected' : this.commonService.selectMode === 'ind'}">
+        Cross Country
+      </span>
+      <!--span class="ind selected" [ngClass]="{'selected' : this.commonService.selectMode === 'ind'}" (click)="this.commonService.selectMode = 'ind'">
         <i aria-hidden="true" class="fa fa-user-circle-o"></i>
         INDIVIDUAL EVENT
       </span>
       <span class="team"  [ngClass]="{'selected' : this.commonService.selectMode === 'team'}" (click)="this.commonService.selectMode = 'team'">
         TEAM EVENT
         <i  aria-hidden="true" class="fa fa-group"></i>
-      </span>
+      </span-->
     </div>
     <button class="btn btn-primary" (click)="commonService.currentPage = 'personalInfo' ">Click to Proceed</button>
   </div>
