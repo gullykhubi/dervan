@@ -1,5 +1,43 @@
 export const events = {
   "ind": {
+    "Cross Country":{
+      "B":[
+        {
+          "9201":"2 Km",
+          "minage": 10
+        },
+        {
+          "9201":"3 Km",
+          "minage": 12
+        },
+        {
+          "9201":"4 Km",
+          "minage": 14
+        },
+        {
+          "9201":"6 Km",
+          "minage": 16
+        }
+      ],
+      "G":[
+        {
+          "9201":"2 Km",
+          "minage": 10
+        },
+        {
+          "9201":"2 Km",
+          "minage": 12
+        },
+        {
+          "9201":"3 Km",
+          "minage": 14
+        },
+        {
+          "9201":"4 Km",
+          "minage": 16
+        }
+      ]
+    },
     "ARCHERY": {
       "B": [
         {

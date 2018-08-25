@@ -11,7 +11,7 @@ export class CommonService {
   eventList = events;
   regNo: any ='';
   list = {
-      ind: ["ARCHERY", "ATHLETICS", "BADMINTON", "CARROM", "CHESS", "GYMNASTICS", "SHOOTING", "SWIMMING", "TT", "WALL CLIMBING", "YOGA"],
+      ind: ["Cross Country"],
       team: ["ATHLETICS", "BASKET BALL", "FOOTBALL", "KABADDI", "KHO KHO", "LANGADI", "SWIMMING", "VOLLEYBALL"]
   }
   eventSelected:any =[]

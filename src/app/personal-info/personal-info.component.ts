@@ -164,7 +164,8 @@ export class PersonalInfoComponent implements OnInit {
 			      for(let i=0;i<this.commonService.list[this.commonService.selectMode].length;i++){
               if(this.commonService.eventList[this.commonService.selectMode][this.commonService.list[this.commonService.selectMode][i]][this.commonService.partidetails.gender]!== undefined){
 				        temp[this.commonService.list[this.commonService.selectMode][i]]=this.commonService.eventList[this.commonService.selectMode][this.commonService.list[this.commonService.selectMode][i]][this.commonService.partidetails.gender].filter((e)=>{return this.isEligible(e);});
-                temp[this.commonService.list[this.commonService.selectMode][i]].length=1;
+                        if(temp[this.commonService.list[this.commonService.selectMode][i]].length>0)
+                             temp[this.commonService.list[this.commonService.selectMode][i]].length=1;
             }
           }
             this.commonService.selectedEventList=temp;

@@ -143,7 +143,7 @@ pdf: any;
 			        ]
 			    },
 			    {text :'Entry fees Rs.70/-   per Entry ( Inclusive of GST) shall be levied;',margin:[0,5,0,0]},
-           {text 'Last date of payment is September 3, 2018 beyond which Late Fee of Rs. 25/-',margin:[0,5,0,0]},
+           {text: 'Last date of payment is September 3, 2018 beyond which Late Fee of Rs. 25/-',margin:[0,5,0,0]},
 				    {
 			        stack:[
 			            {text :'At the time of reporting every participant should carry ',margin:[0,5,0,0]},
