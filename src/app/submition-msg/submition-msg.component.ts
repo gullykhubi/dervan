@@ -142,8 +142,8 @@ pdf: any;
 			            {text :'IFSC Code: BKID0001411',margin:[0,5,0,0]}*/
 			        ]
 			    },
-			    {text :'Entry fees Rs.70/-   per Entry ( Inclusive of GST) shall be levied;',margin:[0,5,0,0]},
-           {text: 'Last date of payment is September 3, 2018 beyond which Late Fee of Rs. 25/-',margin:[0,5,0,0]},
+			    {text :'Entry fees Rs.70/-   per Entry ( Inclusive of GST).',margin:[0,5,0,0]},
+           {text: 'Last date of payment is September 3, 2018 beyond which Late Fee of Rs. 25/- shall be levied;',margin:[0,5,0,0]},
 				    {
 			        stack:[
 			            {text :'At the time of reporting every participant should carry ',margin:[0,5,0,0]},
@@ -152,10 +152,11 @@ pdf: any;
 			        ol: [
 				        {text :'Printout of the registration formdully filled in(Affix latest photograph)  alongwith payment receipt issued by the office of SVJCT Sports Academy;',margin:[0,5,0,0]},
 				        {text :'Original and a photocopy / xerox of the age proof e.g. Aadhar card/SSC Certificate/School Certificate as is provided by the participant at the time of registration;',margin:[0,5,0,0]},
-				        {text :'Reporting time 7 a.m. to 9 a.m. on 6th September, 2018.',margin:[0,5,0,0]}
+                {text :'In case of fake Date Of Birth SVJCT will disqualify the participants.',margin:[0,5,0,0]},
+                {text :'Reporting time 7 a.m. to 9 a.m. on 6th September, 2018.',margin:[0,5,0,0]}
               ]
 		        }]},
-		        {text :'SVJCT Sports Academy Management reserves all rights to modify/change, add/cancel etc. any of the event in respect of the DYG 2018 as it deems fit and proper.',margin:[0,5,0,0]}
+		        {text :'SVJCT Sports Academy Management reserves all rights to modify/change, add/cancel etc. any of the event in respect of the Cross Country 2018 as it deems fit and proper.',margin:[0,5,0,0]}
 			]
 		}]};
   }

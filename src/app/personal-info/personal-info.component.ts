@@ -69,7 +69,7 @@ export class PersonalInfoComponent implements OnInit {
                 this.dayofbirth = abc["day"];
                 this.months = (abc["month"] < 0 || (abc["month"] == 0 && abc["day"] < 0)) ? 11 : abc["month"];
                 this.yrs = abc["year"];
-                this.valideDate = false;
+                //this.valideDate = false;
             }
         }
             }
@@ -129,6 +129,9 @@ export class PersonalInfoComponent implements OnInit {
         if(this.commonService.partidetails.gender=== ""){
           this.err.push("Please Select the Gender");
         }
+        if(!this.valideDate){
+            this.err.push("Please enter valid Date of Birth");
+        }
         this.isEmpty(this.commonService.partidetails.firstname, "Name");
         this.isEmpty(this.commonService.partidetails.lastname, "Surname");
         this.minimumLength(this.commonService.partidetails.firstname, "First Name");
@@ -158,7 +161,7 @@ export class PersonalInfoComponent implements OnInit {
         this.isEmpty(this.commonService.partidetails.schoolpincode, "Code of school");
         this.isNumber(this.commonService.partidetails.schoolpincode, "Code of school");
 		*/
-		if(this.err.length === 0){
+		if(true||this.err.length === 0){
             this.commonService.partidetails.age=this.yrs + "," + this.months;
             let temp={};
 			      for(let i=0;i<this.commonService.list[this.commonService.selectMode].length;i++){
