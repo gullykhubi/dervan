@@ -161,7 +161,7 @@ export class PersonalInfoComponent implements OnInit {
         this.isEmpty(this.commonService.partidetails.schoolpincode, "Code of school");
         this.isNumber(this.commonService.partidetails.schoolpincode, "Code of school");
 		*/
-		if(true||this.err.length === 0){
+		if(this.err.length === 0){
             this.commonService.partidetails.age=this.yrs + "," + this.months;
             let temp={};
 			      for(let i=0;i<this.commonService.list[this.commonService.selectMode].length;i++){
