@@ -35,7 +35,7 @@ pdf: any;
      }
 
      content.push(this.addGames());
-     content.push(this.paymentDetails());
+     //content.push(this.paymentDetails());
      content.push(this.getDisclaimer());
      var docDefinition = {
        "pageMargins": [
@@ -135,7 +135,7 @@ pdf: any;
 			    ol: [
 			        {
 			        stack:[
-			            {text:'Payment to be made at SVJCT Sports Complex Office, Dervan in case of cash payment.',margin:[0,5,0,0]}
+			            {text:'Payment to be made at SVJCT Sports Complex Office, Dervan.',margin:[0,5,0,0]}
 			            /*{text :'Bank Account no. :141110200017659',margin:[0,5,0,0]},
 			            {text :'Account Name:Vithalrao Joshi Charities Trust',margin:[0,5,0,0]},
 			            {text :'Bank Name & Branch: Bank of India, Chiplun Branch, Ayeshabi Complex, Bazaar Peth, Chiplun, Ratnagiri, Maharashtra',margin:[0,5,0,0]},
@@ -150,8 +150,9 @@ pdf: any;
 			    {
 			        type: 'lower-alpha',
 			        ol: [
-				        {text :'Printout of the registration formdully filled in(Affix latest photograph)  alongwith payment receipt issued by the office of SVJCT Sports Academy;',margin:[0,5,0,0]},
-				        {text :'Original and a photocopy / xerox of the age proof e.g. Aadhar card/SSC Certificate/School Certificate as is provided by the participant at the time of registration;',margin:[0,5,0,0]},
+				        {text :'Printout of the registration form duly filled in (Affix latest photograph) along with payment receipt issued by the office of SVJCT Sports Academy.',margin:[0,5,0,0]},
+				        {text :'Original and a photocopy / xerox of the age proof e.g. Aadhar Card/SSC Certificate/School Certificate as is provided by the participant at the time of registration.',margin:[0,5,0,0]},
+                {text :'Participants must compete with shoes on both feet.',margin:[0,5,0,0]},
                 {text :'In case of fake Date Of Birth SVJCT will disqualify the participants.',margin:[0,5,0,0]},
                 {text :'Reporting time 7 a.m. to 9 a.m. on 6th September, 2018.',margin:[0,5,0,0]}
               ]
@@ -171,6 +172,6 @@ pdf: any;
     return {fontSize:12,"table":{"widths":[268,268],"color":"#404040","body":[[{"fontWeight":"bolder","stack":[{"margin":[0,2,0,2],"text":[{"fontSize":12,"text":a+"NAME : "},{"margin":[20,0,0,0],"text":this.commonService.partidetails.firstname+' '+this.commonService.partidetails.middlename+' '+this.commonService.partidetails.lastname}]},{"margin":[0,2,0,2],"text":[{"fontSize":12,"text":"DATE OF BIRTH : "},{"text":temp}]},{"margin":[0,2,0,2],"text":[{"fontSize":12,"text":"ADDRESS :\n"},{"text": this.commonService.partidetails.addr1+", "+this.commonService.partidetails.city+"-"+this.commonService.partidetails.pincode+", "+this.commonService.partidetails.state}]},{"margin":[0,2,0,2],"text":[{"fontSize":12,"text":"MOBILE :"},{"text":this.commonService.partidetails.contactno}]}]},{"fontWeight":"bolder","stack":[{"margin":[0,2,0,2],"text":[{"fontSize":12,"text":"SCHOOL/CLUB/TEAM :"},{"margin":[20,0,0,0],"text":this.commonService.partidetails.nameOfSchoolOrClub}]},{"margin":[0,2,0,2],"text":[{"fontSize":12,"text":"EMERGENCY PHONE :"},{"text":this.commonService.partidetails.alternativeno}]}]}]]}};
   }
   getHeader(){
-      return {"columns":[{"width":5,"canvas":[{"type":"line","x1":0,"y1":10,"x2":0,"y2":60,"lineWidth":2,"lineColor":"#1F4E79"}]},{"width":5,"canvas":[{"type":"line","x1":0,"y1":10,"x2":0,"y2":60,"lineWidth":2,"lineColor":"#1F4E79"}]},{"width":400,"stack":[{"text":"SVJCT’S SPORTS ACADEMY","fontSize":20,"color":"#1F4E79","margin":[0,7,0,0]},{"text":"SVJCT Cross Country - 2018","fontSize":15,"color":"#3E86CA","margin":[0,7,0,0]},{"text":"REGISTRATION CONFIRMATION FORM","fontSize":17,"color":"#1F4E79","margin":[0,27,0,0]}]},{"width":5,"canvas":[{"type":"rect","x":0,"y":10,"w":140,"h":180,"lineWidth":2,"lineColor":"#1F4E79"}]}]};
+      return {"columns":[{"width":5,"canvas":[{"type":"line","x1":0,"y1":10,"x2":0,"y2":60,"lineWidth":2,"lineColor":"#1F4E79"}]},{"width":5,"canvas":[{"type":"line","x1":0,"y1":10,"x2":0,"y2":60,"lineWidth":2,"lineColor":"#1F4E79"}]},{"width":400,"stack":[{"text":"SVJCT’S SPORTS ACADEMY","fontSize":20,"color":"#1F4E79","margin":[0,7,0,0]},{"text":"SVJCT Cross Country - 2018","fontSize":15,"color":"#3E86CA","margin":[0,7,0,0]},{"text":"REGISTRATION CONFIRMATION FORM","fontSize":17,"color":"#1F4E79","margin":[0,27,0,0]}]},{text:"Photo",margin:[50,100,0,0]},{"width":5,margin:[-140,0,0,0],"canvas":[{"type":"rect","x":0,"y":10,"w":140,"h":180,"lineWidth":2,"lineColor":"#1F4E79"}]}]};
   }
 }
